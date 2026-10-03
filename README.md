@@ -34,6 +34,7 @@ Want an answer rather than a read? Go to the **[FAQ](guides/07-faq.md)**.
 4. **Point it at an example project** (SkyCraft for passthrough, hl2-rs for rewrites) and tell it what you want.
 5. **Expect many rounds.** The first prompt rarely finishes the job. You playtest, report what happened, and the agent fixes it.
 6. **Never commit game files.** Your repo holds your code only. Players use their own copies.
+7. **DRM and anti-cheat software will very often go untouched by an Agent.** Similarly, only-online games are a no-go for Agents. We don't condone the circumvention of these Agent guardrails, piracy, or DRM circumvention.
 
 ## Guides
 
