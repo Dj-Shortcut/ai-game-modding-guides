@@ -102,7 +102,6 @@ These come up on the Discord constantly:
 | Idea | Why not |
 |------|---------|
 | Any online or multiplayer game as the gameplay side | Out of scope entirely. See [guide 6](06-rules-legal-and-publishing.md) |
-| Rocket League in online matches | Easy Anti-Cheat is required for online play, and mods don't run while it's enabled |
 | A host game with no mod loader and no source | You'd be reverse engineering the whole engine first |
 
 ### Rocket League specifically
