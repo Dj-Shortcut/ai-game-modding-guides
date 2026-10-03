@@ -2,6 +2,8 @@
 
 These guides exist because people kept asking the same questions and getting the same three answers. If you know something that isn't here, adding it is the single most useful thing you can do.
 
+Questions, half-written ideas, and "is this even possible?" are all welcome in **[#support-help](https://discord.gg/ccFpNC26Ts)** on the [chasm server](https://discord.gg/ccFpNC26Ts) — you don't need a finished write-up to start a conversation here.
+
 You do not need to be a professional developer. Several of the most valuable contributions here have come from people who were stuck last month and worked it out.
 
 ## What we want
@@ -28,7 +30,7 @@ Specifically useful:
 
 ## How to contribute
 
-1. **Open an issue first** for anything substantial. Two minutes of discussion saves everyone a wasted pull request. Even if you'd rather just write it, an issue means people who had the same problem get an answer even if your PR stalls.
+1. **Open an issue first** for anything substantial. Two minutes of talking it through saves everyone a wasted pull request. Even if you'd rather just write it, an issue means people who had the same problem get an answer even if your PR stalls.
 2. **Fork and edit.** Markdown only, no build step.
 3. **Keep the voice.** Short sentences, plain words, no jargon without an explanation. The audience has never written code.
 4. **Use real numbers.** Version numbers, timings, error messages. "It worked after about 20 minutes on my machine" beats "it was fast."
@@ -63,7 +65,7 @@ Match the tone of the existing guides. They're deliberately plain, and they say 
 
 ## Things that are actually debated
 
-[Guide 4](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words) has a long open section on whether detailed prompts or short loose prompts work better. Members disagree sharply. If you run a controlled comparison, that's a genuinely useful contribution and we want it.
+[Guide 4](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words) has a long open section on whether detailed prompts or short loose prompts work better. Members disagree sharply. If you run a controlled comparison, that's a genuinely useful contribution and we want it. Post the results in [#support-help](https://discord.gg/ccFpNC26Ts) or open a pull request.
 
 [Guide 8](guides/08-mod-loaders-and-script-extenders.md) is missing plenty. If you know that a game has a good modding setup that isn't listed, add it. Include the loader, its language, and a link.
 

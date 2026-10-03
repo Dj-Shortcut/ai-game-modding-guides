@@ -5,11 +5,11 @@ Beginner guides for two kinds of project, both built with an AI coding agent:
 - **Passthrough mods** — two games running at once and linked together, like SkyCraft (Minecraft inside Skyrim).
 - **Rust rewrites and ports** — rebuilding a game's engine in Rust so it reads data from your own copy, like hl2-rs.
 
-These guides are written from the questions people actually asked. If something is missing or wrong, [open an issue](CONTRIBUTING.md) or send a pull request.
+These guides are written from the questions people actually asked on the [chasm server](https://discord.gg/ccFpNC26Ts). If something is missing or wrong, [open an issue](CONTRIBUTING.md) or send a pull request.
 
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE)
 [![Contributing welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Discussions open](https://img.shields.io/badge/discussions-open%20%E2%9C%93-blueviolet.svg)](https://github.com/trevaintdead/ai-game-modding-guides/discussions)
+[![Discord](https://img.shields.io/badge/Discord-join%20the%20server-5865F2?logo=discord&logoColor=white)](https://discord.gg/ccFpNC26Ts)
 [![Single-player and offline games only](https://img.shields.io/badge/scope-single-player%20%26%20offline%20games%20you%20own-lightgrey.svg)](guides/06-rules-legal-and-publishing.md)
 
 > **Status:** draft. Tools, models, plan limits, and mod loaders change fast. Every external link was checked in October 2026, but verify a detail before you rely on it.
@@ -78,9 +78,17 @@ People who have never written code and want to try something anyway. You don't n
 
 You do need to be willing to describe problems clearly and to spend most of your time playtesting and reporting back. That's the actual job.
 
+## Get help
+
+Guides can only cover so much. For anything specific to your setup, ask in **[#support-help](https://discord.gg/ccFpNC26Ts)** on the [chasm server](https://discord.gg/ccFpNC26Ts) — that's where people post problems, and where the answers get turned into better guides.
+
+Include your games and exact versions, the loaders, the agent and model, what you tried, and the logs. If the chat got stuck, the `STATUS.md` trick in [guide 4](guides/04-prompting-and-workflow.md#the-handoff-trick-for-stuck-chats) writes most of that for you.
+
+Corrections to the guides themselves are better as a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Open questions
 
-Some things in here genuinely aren't settled. If you know the answer, the repo has [Discussions enabled](https://github.com/trevaintdead/ai-game-modding-guides/discussions):
+Some things in here genuinely aren't settled. If you know the answer, post it in [#support-help](https://discord.gg/ccFpNC26Ts):
 
 - Does a detailed prompt or a short loose one work better? [Both camps are quoted here.](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words)
 - Which free model can actually finish a project?

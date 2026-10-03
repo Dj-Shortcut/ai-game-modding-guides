@@ -1,10 +1,10 @@
 # Workflow Write-Up Template
 
-Use this when you're sharing a finished project. It is the thing the server is short of — almost nobody documents *how* they actually got there.
+Use this when you're sharing a finished project. It is the thing the [server](https://discord.gg/ccFpNC26Ts) is short of — almost nobody documents *how* they actually got there.
 
 A feature list proves the thing works. A workflow write-up is what lets someone else do it too. Write one even if your project is small and imperfect; a rough honest one is worth more than a polished marketing page.
 
-Copy to your repo as `WORKFLOW.md`, or paste it in a discussion thread.
+Copy to your repo as `WORKFLOW.md`, or post it as a thread in the share forum.
 
 ---
 

@@ -68,7 +68,7 @@ See [guide 5](05-testing-and-troubleshooting.md). The short version: the agent i
 
 **This section is open. It's meant to be argued with.**
 
-There was a long thread on this in the server and it got heated. Rather than pretend we settled it, here is what was actually said. Read both, try both, and post your results in [Discussions](https://github.com/trevaintdead/ai-game-modding-guides/discussions) or in the tech-support forum.
+There was a long thread on this in the server and it got heated. Rather than pretend we settled it, here is what was actually said. Read both, try both, and post your results in [#support-help](https://discord.gg/ccFpNC26Ts).
 
 > **chazm** — "guys theres no tricks or special prompts, you literally just tell the ai to do stuff and itll do it. Thats all i do"
 >
@@ -120,7 +120,7 @@ If you run a controlled comparison, this is genuinely wanted here. Log the same 
 - how much of your usage limit it consumed
 - what it got wrong
 
-Post it in [Discussions](https://github.com/trevaintdead/ai-game-modding-guides/discussions) and we'll fold the best ones into this page.
+Post it in [#support-help](https://discord.gg/ccFpNC26Ts) on the Discord and we'll fold the best ones into this page. A GitHub issue works too, if you'd rather have it written down somewhere permanent.
 
 ### A few things that came up in the thread
 

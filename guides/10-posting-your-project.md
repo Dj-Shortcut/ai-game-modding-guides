@@ -2,12 +2,13 @@
 
 You've got something that runs. Now you want people to actually find it, and you don't want to get your project taken down for a rule you didn't know about.
 
-<!-- COMMUNITY: replace the server-specific bits in this page. The server name and
-     invite link are not yet filled in. Search this file for COMMUNITY. -->
+<!-- COMMUNITY: the Discord invite link below is https://discord.gg/ccFpNC26Ts
+     (the chasm server). Channel names are approximate — confirm them before
+     publishing, and keep this comment if any of it is still wrong. -->
 
 ## What to post, and where
 
-Post to the **share forum** on our Discord so the right people see it. The forum is for finished projects, and posts there get pinned when they're good.
+Post to the **share forum** on the [chasm server](https://discord.gg/ccFpNC26Ts) so the right people see it. The forum is for finished projects, and posts there get pinned when they're good.
 
 If you want your project to be usable by other people, put it on **GitHub** and link the repo. A repo is strongly recommended; a direct download link is not.
 
@@ -131,7 +132,7 @@ Keep it short. The README does the detail.
 
 ### Tags and format
 
-Use the tags and the post template from the pinned guidelines in the server. If you skip the template your post is harder to read and gets less help.
+Use the tags and the post template from the pinned guidelines on the [Discord](https://discord.gg/ccFpNC26Ts). If you skip the template your post is harder to read and gets less help.
 
 ### After you post
 

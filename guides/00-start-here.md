@@ -2,6 +2,8 @@
 
 You have never done this before and want to know what's involved. This page is the map. The other guides fill in the details.
 
+Stuck on something specific to your setup? Ask in [#support-help](https://discord.gg/ccFpNC26Ts) on the [chasm server](https://discord.gg/ccFpNC26Ts).
+
 ## What you're actually doing
 
 You are not writing the code. You tell an AI agent what you want, it writes and builds the code, and you test the result by playing. Your job is to:
@@ -19,7 +21,7 @@ Experienced members say the core of it is simple: install the games, open an age
 |--------------|------|------------|
 | Put one game's gameplay inside another (Minecraft in Skyrim, Skate 3 in GTA) | [Passthrough mods](02-passthrough-mods.md) | Both games run at once and talk to each other |
 | Rebuild a game's engine so it runs on its own | [Rust rewrites](03-rust-rewrites-and-ports.md) | Bigger job. Reads your game files at runtime |
-| Just play what others made | See the share forum | Use the project's own install instructions |
+| Just play what others made | See the share forum on the [Discord](https://discord.gg/ccFpNC26Ts) | Use the project's own install instructions |
 
 If you're not sure, start with a passthrough mod. It's usually the faster way to see something working.
 

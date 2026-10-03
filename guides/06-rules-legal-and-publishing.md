@@ -1,6 +1,6 @@
 # 6. Rules, Legal, and Publishing
 
-This is not legal advice. It's what the server requires and what the example projects do. The full posting walkthrough is in [guide 10](10-posting-your-project.md).
+This is not legal advice. It's what the [server](https://discord.gg/ccFpNC26Ts) requires and what the example projects do. The full posting walkthrough is in [guide 10](10-posting-your-project.md).
 
 ## The golden rule: no game files in your repo
 

@@ -115,7 +115,7 @@ No. See [guide 6](06-rules-legal-and-publishing.md).
 Make sure your upload has no copyrighted game content. One member suggests having the agent write an extractor that players run themselves. Check the platform's rules.
 
 **Where can I see finished projects?**
-In the share forum. A member is also working on a website to collect them.
+In the share forum on the [Discord](https://discord.gg/ccFpNC26Ts). A member is also working on a website to collect them.
 
 **How do I post my project?**
 See [guide 10](10-posting-your-project.md), which has the pre-flight checklist and a post template.
@@ -125,7 +125,7 @@ A screenshot or GIF, a real commit history, an honest "what doesn't work" sectio
 
 ## Still unanswered
 
-These came up and nobody has given a confirmed answer. If you know, please add it — [Discussions](https://github.com/trevaintdead/ai-game-modding-guides/discussions) is open, and so are issues and pull requests.
+These came up and nobody has given a confirmed answer. If you know, post it in [#support-help](https://discord.gg/ccFpNC26Ts), or open a pull request and add it here.
 
 - Which free model works best with OpenCode?
 - Whether free plans can complete a real project
