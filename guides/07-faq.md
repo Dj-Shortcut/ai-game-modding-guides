@@ -34,7 +34,7 @@ No. Rocket League is an online game with anti-cheat, which puts it out of scope.
 Maybe. It depends mostly on whether the host game can run your code (script extender, mod loader, plugin system) and whether it's single-player. Members have reported projects like Elden Ring and Spider-Man mechanics and an Octane-style car in Minecraft, but nothing is guaranteed. Search for existing projects and tools for your games first.
 
 **What games are easiest to start with?**
-Minecraft, Skyrim, and Fallout 4, by a wide margin. They have the best-documented loaders in gaming: Fabric for Minecraft, SKSE for Skyrim, F4SE for Fallout 4. Every beginner passthrough project on the server is built on them.
+Minecraft, Skyrim, and Fallout 4, by a wide margin. They have the best-documented loaders in gaming: Fabric for Minecraft, SKSE for Skyrim, F4SE for Fallout 4. Every beginner passthrough project on the Discord is built on them.
 
 **What are the hardest?**
 Games with no mod loader and no source. If the host game has nothing, you're reverse engineering an engine before you can start. See [guide 8](08-mod-loaders-and-script-extenders.md).
@@ -86,7 +86,7 @@ Usually not. For a SkyCraft-style passthrough mod you need a way to run code ins
 Ghidra is free, open source, and the one members actually use. IDA Pro is the commercial standard. Binary Ninja sits in between. You can also ask your agent which tool fits your game's format and let it set it up.
 
 **Can Unreal Engine games be decompiled?**
-Nobody on the server has a confirmed answer. UE4SS exists as a modding and introspection tool, which gets you a long way without decompiling. Ask your agent to check for existing community tooling for your specific title.
+Nobody on the Discord has a confirmed answer. UE4SS exists as a modding and introspection tool, which gets you a long way without decompiling. Ask your agent to check for existing community tooling for your specific title.
 
 **Why Rust and Bevy? Why not C or C++?**
 You don't have to use them. People reach for them because Rust catches memory mistakes before the game runs, setup is easy, Bevy is a free all-code engine, and AI is good at fixing Rust. C and C++ work fine too. The plugins that go inside Skyrim, Fallout 4, and GTA are still C++.
@@ -115,7 +115,7 @@ No. See [guide 6](06-rules-legal-and-publishing.md).
 Make sure your upload has no copyrighted game content. One member suggests having the agent write an extractor that players run themselves. Check the platform's rules.
 
 **Where can I see finished projects?**
-In the share forum on the [Discord](https://discord.gg/ccFpNC26Ts). A member is also working on a website to collect them.
+In the share forum on the Discord. A member is also working on a website to collect them.
 
 **How do I post my project?**
 See [guide 10](10-posting-your-project.md), which has the pre-flight checklist and a post template.
@@ -125,7 +125,7 @@ A screenshot or GIF, a real commit history, an honest "what doesn't work" sectio
 
 ## Still unanswered
 
-These came up and nobody has given a confirmed answer. If you know, post it in [#support-help](https://discord.gg/ccFpNC26Ts), or open a pull request and add it here.
+These came up and nobody has given a confirmed answer. If you know, post it on the Discord, or open a pull request and add it here.
 
 - Which free model works best with OpenCode?
 - Whether free plans can complete a real project

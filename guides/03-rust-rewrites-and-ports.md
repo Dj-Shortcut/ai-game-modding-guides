@@ -46,7 +46,7 @@ If you have a working game and want to link a second one to it, you want [guide 
 2. **The game has a source release.** Some studios shipped their engines or games as source, legally and publicly. Check.
 3. **You need the executable's logic.** Only then is decompiling on the table.
 
-Members routinely skip steps 1 and 2 and lose whole evenings to it. Two separate people on the server said the same thing: *look for an existing decomp or format project before you start.* Ask the agent to search first. It's good at finding community projects.
+Members routinely skip steps 1 and 2 and lose whole evenings to it. Two separate people on the Discord said the same thing: *look for an existing decomp or format project before you start.* Ask the agent to search first. It's good at finding community projects.
 
 ### When you do need it
 

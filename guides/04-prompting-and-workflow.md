@@ -68,7 +68,7 @@ See [guide 5](05-testing-and-troubleshooting.md). The short version: the agent i
 
 **This section is open. It's meant to be argued with.**
 
-A long thread on this got heated on the server. Rather than pretend we settled it, here are the quotes. Read both, try both, and post your results in [#support-help](https://discord.gg/ccFpNC26Ts).
+A long thread on this got heated on the Discord. Rather than pretend we settled it, here are the quotes. Read both, try both, and post your results on the Discord.
 
 > **chazm:** "guys theres no tricks or special prompts, you literally just tell the ai to do stuff and itll do it. Thats all i do"
 >
@@ -120,7 +120,7 @@ A controlled comparison would be welcome here. Log the same task twice with a lo
 - how much of your usage limit it consumed
 - what it got wrong
 
-Post it in [#support-help](https://discord.gg/ccFpNC26Ts) on the Discord and we'll fold the best ones into this page. A GitHub issue works too, if you'd rather have it written down somewhere permanent.
+Post it on the Discord and we'll fold the best ones into this page. A GitHub issue works too, if you'd rather have it written down somewhere permanent.
 
 ### A few things that came up in the thread
 

@@ -64,7 +64,7 @@ Write down your OS, game versions, and tool versions when you ask for help, and 
 
 ## Asking for help
 
-Post in [#support-help](https://discord.gg/ccFpNC26Ts) on the Discord, or open a GitHub issue. Include:
+Post on the Discord, or open a GitHub issue. Include:
 
 - the games and their exact versions
 - the loaders and their versions

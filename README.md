@@ -5,7 +5,7 @@ Beginner guides for two kinds of project, both built with an AI coding agent:
 - **Passthrough mods:** two games running at once and linked together, like SkyCraft (Minecraft inside Skyrim).
 - **Rust rewrites and ports:** rebuilding a game's engine in Rust so it reads data from your own copy, like hl2-rs.
 
-These guides answer the questions people asked on the [chasm server](https://discord.gg/ccFpNC26Ts). If something is missing or wrong, [open an issue](CONTRIBUTING.md) or send a pull request.
+These guides answer the questions people asked on the Discord. If something is missing or wrong, [open an issue](CONTRIBUTING.md) or send a pull request.
 
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE)
 [![Contributing welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -80,7 +80,7 @@ You do need to be willing to describe problems clearly and to spend most of your
 
 ## Get help
 
-Guides can only cover so much. For anything specific to your setup, ask in **[#support-help](https://discord.gg/ccFpNC26Ts)** on the [chasm server](https://discord.gg/ccFpNC26Ts). That's where people post problems, and where the answers get turned into better guides.
+Guides can only cover so much. For anything specific to your setup, ask in **#support-help** on the [chasm server](https://discord.gg/ccFpNC26Ts). That's where people post problems, and where the answers get turned into better guides.
 
 Include your games and exact versions, the loaders, the agent and model, what you tried, and the logs. If the chat got stuck, the `STATUS.md` trick in [guide 4](guides/04-prompting-and-workflow.md#the-handoff-trick-for-stuck-chats) writes most of that for you.
 
@@ -88,7 +88,7 @@ Corrections to the guides themselves are better as a pull request. See [CONTRIBU
 
 ## Open questions
 
-Nobody has settled these. If you know the answer, post it in [#support-help](https://discord.gg/ccFpNC26Ts):
+Nobody has settled these. If you know the answer, post it on the Discord:
 
 - Does a detailed prompt or a short loose one work better? [Both camps are quoted here.](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words)
 - Which free model can finish a project?

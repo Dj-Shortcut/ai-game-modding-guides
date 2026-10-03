@@ -1,6 +1,6 @@
 # 6. Rules, Legal, and Publishing
 
-This is not legal advice. It's what the [server](https://discord.gg/ccFpNC26Ts) requires and what the example projects do. The full posting walkthrough is in [guide 10](10-posting-your-project.md).
+This is not legal advice. It's what the Discord requires and what the example projects do. The full posting walkthrough is in [guide 10](10-posting-your-project.md).
 
 ## The golden rule: no game files in your repo
 
@@ -60,7 +60,7 @@ If you're unsure where a line is, ask. Nobody gets in trouble for asking first.
 
 If a rights holder asks you to change or remove something, do it. gang-beasts-rust says this in its README, and it's a good habit.
 
-## Publishing on the server
+## Publishing on the Discord
 
 The share forum has rules:
 

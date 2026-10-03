@@ -2,7 +2,7 @@
 
 You have never done this before and want to know what's involved. This page is the map. The other guides fill in the details.
 
-Stuck on something specific to your setup? Ask in [#support-help](https://discord.gg/ccFpNC26Ts) on the [chasm server](https://discord.gg/ccFpNC26Ts).
+Stuck on something specific to your setup? Ask on the Discord.
 
 ## What you do
 
@@ -21,7 +21,7 @@ Experienced members say the core of it is simple: install the games, open an age
 |--------------|------|------------|
 | Put one game's gameplay inside another (Minecraft in Skyrim, Skate 3 in GTA) | [Passthrough mods](02-passthrough-mods.md) | Both games run at once and talk to each other |
 | Rebuild a game's engine so it runs on its own | [Rust rewrites](03-rust-rewrites-and-ports.md) | Bigger job. Reads your game files at runtime |
-| Play what others made | Share forum on the [Discord](https://discord.gg/ccFpNC26Ts) | Use the project's own install instructions |
+| Play what others made | Share forum on the Discord | Use the project's own install instructions |
 
 Start with a passthrough mod if you're unsure. You see something working sooner.
 
@@ -29,7 +29,7 @@ Start with a passthrough mod if you're unsure. You see something working sooner.
 
 These answer most of the questions people arrive with:
 
-1. **[Which loaders and script extenders exist](08-mod-loaders-and-script-extenders.md)**: decides whether your game idea is even realistic. This is the most repeated question on the server.
+1. **[Which loaders and script extenders exist](08-mod-loaders-and-script-extenders.md)**: decides whether your game idea is even realistic. This is the most repeated question on the Discord.
 2. **[A full passthrough walkthrough](09-worked-example-passthrough-mod.md)**: the whole process end to end, with the prompts.
 3. **[Posting your project](10-posting-your-project.md)**: what a finished project needs before others can use it.
 

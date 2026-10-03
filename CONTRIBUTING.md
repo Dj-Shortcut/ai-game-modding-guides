@@ -2,13 +2,13 @@
 
 These guides exist because people kept asking the same questions and getting the same answers. If you know something that isn't here, adding it is the most useful thing you can do.
 
-Questions, half-written ideas, and "is this even possible?" are all welcome in **[#support-help](https://discord.gg/ccFpNC26Ts)** on the [chasm server](https://discord.gg/ccFpNC26Ts). You don't need a finished write-up to start a conversation there.
+Questions, half-written ideas, and "is this even possible?" are all welcome on the Discord. You don't need a finished write-up to start a conversation there.
 
 You do not need to be a professional developer. Several of the most valuable contributions here came from people who were stuck last month and worked it out.
 
 ## What we want
 
-**Experienced developers writing proper technical guides.** This is the biggest gap. `toast` said it directly in the server: *pretty daunting, will it be technically thorough for those who would want to learn?* If that question is aimed at you, this repo is the place to answer it.
+**Experienced developers writing proper technical guides.** This is the biggest gap. `toast` said it directly on the Discord: *pretty daunting, will it be technically thorough for those who would want to learn?* If that question is aimed at you, this repo is the place to answer it.
 
 Specifically useful:
 
@@ -65,7 +65,7 @@ Match the tone of the existing guides. They're deliberately plain, and they say 
 
 ## Open debates
 
-[Guide 4](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words) has a long section on whether detailed prompts or short loose prompts work better. Members disagree sharply. If you run a controlled comparison, that would be a useful contribution and we want it. Post the results in [#support-help](https://discord.gg/ccFpNC26Ts) or open a pull request.
+[Guide 4](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words) has a long section on whether detailed prompts or short loose prompts work better. Members disagree sharply. If you run a controlled comparison, that would be a useful contribution and we want it. Post the results on the Discord or open a pull request.
 
 [Guide 8](guides/08-mod-loaders-and-script-extenders.md) is missing plenty. If you know that a game has a good modding setup that isn't listed, add it. Include the loader, its language, and a link.
 

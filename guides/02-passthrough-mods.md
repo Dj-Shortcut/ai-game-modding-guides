@@ -97,7 +97,7 @@ Steps 1 and 2 are the whole trick. Once one value crosses between the games, the
 
 ## Ideas that don't work, and why
 
-These come up on the server constantly:
+These come up on the Discord constantly:
 
 | Idea | Why not |
 |------|---------|

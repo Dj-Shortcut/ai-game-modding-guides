@@ -1,6 +1,6 @@
 # 8. Mod Loaders and Script Extenders (Reference)
 
-This is the most repeated question on the server: *"what do I even install to put my code inside this game?"*
+This is the most repeated question on the Discord: *"what do I even install to put my code inside this game?"*
 
 Read this page once and you can skip the hunting. It lists what each engine family gives you and how hard the job looks.
 
