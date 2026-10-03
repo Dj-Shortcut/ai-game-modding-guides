@@ -6,6 +6,7 @@ Beginner guides for two kinds of project, both built with an AI coding agent:
 - **Rust rewrites and ports:** rebuilding a game's engine in Rust so it reads data from your own copy, like hl2-rs.
 
 These guides answer the questions people asked on the Discord. If something is missing or wrong, [open an issue](CONTRIBUTING.md) or send a pull request.
+Also do note that everyone has their own methods/prompting style and workflows, it will probably be impossible to cover everything so take the methods used in the guides with a grain of salt and use it to create your own Methods
 
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE)
 [![Contributing welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
