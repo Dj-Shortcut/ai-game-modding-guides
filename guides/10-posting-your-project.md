@@ -1,16 +1,16 @@
 # 10. Posting Your Project
 
-You've got something that runs. Now you want people to actually find it, and you don't want to get your project taken down for a rule you didn't know about.
+You've got something that runs. Now you want people to find it, and you don't want your project taken down over a rule you didn't know about.
 
 <!-- COMMUNITY: the Discord invite link below is https://discord.gg/ccFpNC26Ts
-     (the chasm server). Channel names are approximate — confirm them before
+     (the chasm server). Channel names are approximate; confirm them before
      publishing, and keep this comment if any of it is still wrong. -->
 
 ## What to post, and where
 
-Post to the **share forum** on the [chasm server](https://discord.gg/ccFpNC26Ts) so the right people see it. The forum is for finished projects, and posts there get pinned when they're good.
+Post to the **share forum** on the [chasm server](https://discord.gg/ccFpNC26Ts) so the right people see it. The forum is for finished projects, and good posts there get pinned.
 
-If you want your project to be usable by other people, put it on **GitHub** and link the repo. A repo is strongly recommended; a direct download link is not.
+Put your project on **GitHub** and link the repo if you want other people to be able to use it. A repo is strongly recommended. A direct download link isn't.
 
 ### Never post these
 
@@ -20,7 +20,7 @@ If you want your project to be usable by other people, put it on **GitHub** and 
 - Links to pirated or leaked material
 - Direct file hosts or download links instead of a repo
 
-If your project needs game content, it reads it from the player's own install. That's the rule, and it's also why every example project has an extractor or a setup script instead of a data folder.
+If your project needs game content, it reads it from the player's own install. That's the rule, and it's why every example project has an extractor or a setup script instead of a data folder.
 
 ## Before you post: the pre-flight
 
@@ -28,7 +28,7 @@ Go through this list. It takes five minutes and prevents every problem we've see
 
 - [ ] `git status` is clean and there's no uncommitted game data
 - [ ] Repo is scanned for large files: `git ls-files | xargs du -h | sort -rh | head -20`
-- [ ] `.gitignore` is a **whitelist** — it ignores everything and includes only source
+- [ ] `.gitignore` is a **whitelist**, ignoring everything and including only source
 - [ ] `git log --all --stat` shows no assets were ever committed
 - [ ] You credited every project you built on, with a link
 - [ ] `THIRD-PARTY-NOTICES.md` exists if you reused code
@@ -37,7 +37,7 @@ Go through this list. It takes five minutes and prevents every problem we've see
 - [ ] README says it's an unofficial fan project
 - [ ] README mentions you used AI
 - [ ] Any release zip was checked for game files
-- [ ] It was tested on a clean machine, not just your own
+- [ ] It was tested on a clean machine, not only your own
 
 ### If you already committed game files
 
@@ -73,8 +73,8 @@ One sentence: what it does and what makes it different.
 - Known bugs
 
 ## Requirements
-- Game A — version X.Y.Z (Steam / GOG / other)
-- Game B — version X.Y.Z
+- Game A: version X.Y.Z (Steam / GOG / other)
+- Game B: version X.Y.Z
 - [Loader](link) for Game A
 - Single-player / offline only
 
@@ -91,7 +91,7 @@ Short, concrete steps.
 A few paragraphs, or link docs/DESIGN.md.
 
 ## Credits
-- [SkyCraft](link) — the design this is based on
+- [SkyCraft](link): the design this is based on
 - [Everyone else who helped]
 
 ## Legal
@@ -103,11 +103,11 @@ Built with AI coding agents.
 
 ## Make the repo look trustworthy
 
-New projects with no stars and no commits get ignored. These things genuinely help:
+New projects with no stars and no commits get ignored. These things help:
 
 - **A screenshot or a GIF.** Usually the difference between a click and a scroll. Notepad-draw something if you have to.
 - **A commit history.** Twenty small commits reads as "someone who works carefully." One giant commit reads as "paste."
-- **A MODLOG.md.** Shows you test what you claim. Members specifically notice this.
+- **A MODLOG.md.** Shows you test what you claim. Members notice this.
 - **An honest "what doesn't work" section.** This builds more trust than a list of features, and it saves you the support questions.
 - **Tell people to back up their saves.** Every serious project in this space does.
 
@@ -142,10 +142,10 @@ Use the tags and the post template from the pinned guidelines on the [Discord](h
 
 ## Where else to publish
 
-- **GitHub Releases** — ship a build as a zip. Check the zip contents for game files first. Many of these projects do this.
-- **Nexus Mods / ModDB** — external mod sites with their own rules. Most require that users supply their own game files.
-- **Steam Workshop** — if your game supports it. Same rule: no copyrighted game content in your upload. Ask your agent to write an extractor players run themselves rather than shipping assets.
-- **A thread here.** Link the repo. Don't repost the whole thing.
+- **GitHub Releases:** ship a build as a zip. Check the zip contents for game files first. Many of these projects do this.
+- **Nexus Mods / ModDB:** external mod sites with their own rules. Most require that users supply their own game files.
+- **Steam Workshop:** if your game supports it. Same rule: no copyrighted game content in your upload. Ask your agent to write an extractor players run themselves rather than shipping assets.
+- **A thread on the Discord.** Link the repo. Don't repost the whole thing.
 
 ## Anti-cheat and online games
 
@@ -155,7 +155,7 @@ If your game has both an online and an offline mode, target the offline mode.
 
 ## If a rights holder contacts you
 
-Remove it. Every serious project in this space says so in its README, and it's the right call. Credit and links to the original work help; they are not a licence to keep shipping someone's assets.
+Remove it. Every serious project in this space says so in its README, and it's the right call. Credit and links to the original work help, but they aren't a licence to keep shipping someone's assets.
 
 ## The post-checklist
 

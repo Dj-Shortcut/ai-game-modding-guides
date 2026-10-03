@@ -1,8 +1,8 @@
 # Workflow Write-Up Template
 
-Use this when you're sharing a finished project. It is the thing the [server](https://discord.gg/ccFpNC26Ts) is short of — almost nobody documents *how* they actually got there.
+Use this when you're sharing a finished project. It's what the [server](https://discord.gg/ccFpNC26Ts) is short of: almost nobody documents *how* they got there.
 
-A feature list proves the thing works. A workflow write-up is what lets someone else do it too. Write one even if your project is small and imperfect; a rough honest one is worth more than a polished marketing page.
+A feature list proves the thing works. A workflow write-up is what lets someone else do it too. Write one even if your project is small and imperfect. A rough honest one beats a polished marketing page.
 
 Copy to your repo as `WORKFLOW.md`, or post it as a thread in the share forum.
 
@@ -10,12 +10,12 @@ Copy to your repo as `WORKFLOW.md`, or post it as a thread in the share forum.
 
 ## Why this exists
 
-The most common complaint about AI-assisted projects is that people say "just tell the AI to do it" and then stop. That is genuinely most of the method, but the useful part is everything around it:
+The commonest complaint about AI-assisted projects is that people say "just tell the AI to do it" and stop there. That is most of the method, and the useful part is everything around it:
 
 - which games you picked and why
 - what you checked *before* starting
 - which dead ends cost you the most time
-- what actually worked
+- what worked
 
 None of that fits in a README.
 
@@ -53,7 +53,7 @@ thing you'd tell someone starting this.]
 The research I did that saved me time. Be specific enough to act on.
 
 1. **Does Game A have a mod loader?** [Which one, which version, where from.]
-   Without this there is no easy path — you'd be reverse engineering.
+   Without this there's no easy path; you'd be reverse engineering.
 2. **Existing projects I read first:** [links + one line on what each taught you]
 3. **Existing mods for Game A:** [links]
 4. **File formats / docs I found:** [links]
@@ -61,7 +61,7 @@ The research I did that saved me time. Be specific enough to act on.
 
 ## The plan
 
-[What you built first, second, third — and why that order. Show the milestones
+[What you built first, second, third, and why that order. Show the milestones
 you aimed at. This is the part people can copy.]
 
 1. [Milestone 1: e.g. "plugin loads and writes a log line"]
@@ -72,7 +72,7 @@ you aimed at. This is the part people can copy.]
 ## Transport and architecture
 
 [How the two halves talk. Shared memory, socket, file, IPC? What messages go
-across and at what rate? Keep this concrete — it's the part people copy.]
+across and at what rate? Keep this concrete; it's the part people copy.]
 
 ## What I prompted, roughly
 
@@ -94,8 +94,8 @@ Why it was a waste: [explanation]
 
 The most valuable section. What didn't work, and what it cost.
 
-- **[Approach]** — [why it failed]. Cost: [time / tokens / a broken build]
-- **[Approach]** — [why it failed]
+- **[Approach]:** [why it failed]. Cost: [time / tokens / a broken build]
+- **[Approach]:** [why it failed]
 
 ## Problems I hit, and what fixed them
 
@@ -110,9 +110,9 @@ someone else will thank you for.]
 
 ## Credits
 
-- [Project] — [what you reused, license]
-- [Person] — [help you got]
-- [Modding community for Game A] — [loader / docs]
+- [Project]: [what you reused, license]
+- [Person]: [help you got]
+- [Modding community for Game A]: [loader / docs]
 
 ## Legal
 
@@ -136,4 +136,4 @@ coding agents.
 - Game assets, screenshots of copyrighted content beyond fair use, or decompiled code
 - Long transcripts of the whole session. Excerpts.
 - Advertising. Post it here and it gets removed.
-- Anything from a game you're not allowed to mod. See [guide 7](../guides/06-rules-legal-and-publishing.md).
+- Anything from a game you're not allowed to mod. See [guide 6](../guides/06-rules-legal-and-publishing.md).

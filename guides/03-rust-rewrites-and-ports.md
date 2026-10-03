@@ -11,7 +11,7 @@ A rewrite or port rebuilds a game's engine from scratch, so it runs on its own i
 | [benilla](https://github.com/samwhosung/benilla) | A WoW 1.12.1 client in Rust and Bevy. A big project with hundreds of commits, readers for the game's file formats, and a generated map of the code |
 | [2010 Rust Rewrite Mashup](https://github.com/chasmlol/2010-rust-rewrite-mashup) | A rewrite combined with other games |
 
-Notice what the good ones have in common: clear "what works / what's missing" lists, no game files, credits, and an `AGENTS.md` or development log so the AI's work can be followed.
+The good ones share some habits: a clear "what works / what's missing" list, no game files, credits, and an `AGENTS.md` or development log so the AI's work can be followed.
 
 ## Why Rust and Bevy?
 
@@ -36,7 +36,7 @@ A rewrite is a big job. hl2-rs, after real effort, is an experimental partial re
 4. **Compare with the real game.** Play the original next to your build and note differences.
 5. **Write down what works and what's missing.**
 
-If you already have a game that works and want to link a second one to it, you want [guide 2](02-passthrough-mods.md) instead — it's a much smaller job.
+If you have a working game and want to link a second one to it, you want [guide 2](02-passthrough-mods.md). Much smaller job.
 
 ## Do I need to decompile?
 
@@ -46,7 +46,7 @@ If you already have a game that works and want to link a second one to it, you w
 2. **The game has a source release.** Some studios shipped their engines or games as source, legally and publicly. Check.
 3. **You need the executable's logic.** Only then is decompiling on the table.
 
-Members routinely skip step 1 and 2 and lose whole evenings to it. Two separate people in the server said the same thing: *look for an existing decomp or format project before you start.* Ask the agent to search first; it's good at finding community projects.
+Members routinely skip steps 1 and 2 and lose whole evenings to it. Two separate people on the server said the same thing: *look for an existing decomp or format project before you start.* Ask the agent to search first. It's good at finding community projects.
 
 ### When you do need it
 
@@ -54,11 +54,11 @@ Tools, in the order members mention them:
 
 | Tool | Cost | Notes |
 |------|------|-------|
-| **Ghidra** | Free, open source | The one people actually use. Needs a Java runtime, and a processor module for some older consoles |
+| **Ghidra** | Free, open source | The one people use. Needs a Java runtime, and a processor module for some older consoles |
 | **IDA Pro** | Commercial, expensive | The industry standard. Free tier is limited. Ghidra is the default recommendation |
 | **Binary Ninja** | Commercial, cheaper than IDA | Popular with people who find Ghidra's interface awkward |
 
-One member reported just asking the agent to decompile a folder "using the correct tools," and it identified the platform and format, installed Ghidra with the right processor module, and ran the process. That's a realistic workflow.
+One member asked the agent to decompile a folder "using the correct tools," and it identified the platform and format, installed Ghidra with the right processor module, and ran the process. That's a realistic workflow.
 
 ### A realistic prompt
 
@@ -79,10 +79,10 @@ a notes file describing what you learned.
 - **Everything stays on your machine.** Never commit decompiled code, Ghidra databases, or extracted assets. See [guide 6](06-rules-legal-and-publishing.md).
 - **Use a whitelist `.gitignore` from day one** so an extracted file can never be committed by accident.
 - **Write down what you learned as documentation**, not as code. That documentation is the shareable part. This is how open-source engine reimplementations like [OpenMW](https://github.com/OpenMW/openmw) and [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2) exist.
-- **Single-player, offline games you own only.** Don't touch DRM, don't touch anti-cheat, don't target anything to get around access controls. See [guide 6](06-rules-legal-and-publishing.md).
+- **Single-player, offline games you own only.** Leave DRM alone. Leave anti-cheat alone. Don't target anything to get around access controls. See [guide 6](06-rules-legal-and-publishing.md).
 - **Don't redistribute the output.** Personal study of a game you own is the scope. Publishing extracted assets or decompiled source is not.
 
-If you go down this path, read [guide 6](06-rules-legal-and-publishing.md) first. It's not legal advice, but it lists what the community's own tooling refuses to do.
+Read [guide 6](06-rules-legal-and-publishing.md) before going down this path. It's not legal advice, but it lists what the community's own tooling refuses to do.
 
 ## Step by step
 

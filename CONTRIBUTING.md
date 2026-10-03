@@ -1,10 +1,10 @@
 # Contributing
 
-These guides exist because people kept asking the same questions and getting the same three answers. If you know something that isn't here, adding it is the single most useful thing you can do.
+These guides exist because people kept asking the same questions and getting the same answers. If you know something that isn't here, adding it is the most useful thing you can do.
 
-Questions, half-written ideas, and "is this even possible?" are all welcome in **[#support-help](https://discord.gg/ccFpNC26Ts)** on the [chasm server](https://discord.gg/ccFpNC26Ts) — you don't need a finished write-up to start a conversation here.
+Questions, half-written ideas, and "is this even possible?" are all welcome in **[#support-help](https://discord.gg/ccFpNC26Ts)** on the [chasm server](https://discord.gg/ccFpNC26Ts). You don't need a finished write-up to start a conversation there.
 
-You do not need to be a professional developer. Several of the most valuable contributions here have come from people who were stuck last month and worked it out.
+You do not need to be a professional developer. Several of the most valuable contributions here came from people who were stuck last month and worked it out.
 
 ## What we want
 
@@ -16,16 +16,16 @@ Specifically useful:
 - Corrections to anything here that's wrong or outdated
 - Answers to the open questions in [the FAQ](guides/07-faq.md#still-unanswered)
 - New games, loaders, or engines to add to [guide 8](guides/08-mod-loaders-and-script-extenders.md)
-- Testing and performance write-ups — this is the least covered topic
+- Testing and performance write-ups, which is the least covered topic
 
-**Workflow write-ups from complete beginners too.** If you got something working recently and you remember being confused, you are exactly the person who can write it down. See [`templates/workflow-writeup.md`](templates/workflow-writeup.md).
+**Workflow write-ups from beginners too.** If you got something working recently and you remember being confused, you are the person who can write it down. See [`templates/workflow-writeup.md`](templates/workflow-writeup.md).
 
 ## What we don't want
 
 - **Anything about anti-cheat, DRM, or online play.** Not as a how-to, not as a "how I got around it." This is a hard line, not a preference.
 - **Game assets, ripped or extracted, in any form.** Including in screenshots beyond fair use, and including in issues or pull requests.
 - **Decompiled code.**
-- **Guides that only say "tell the AI to do it."** That's true and it isn't a guide. Write what happened around it.
+- **Guides that only say "tell the AI to do it."** That is partly true, and it is not a guide. Write what happened around it.
 - **Vague or unverified claims.** "X works great" with no version numbers is worse than nothing, because people will follow it.
 
 ## How to contribute
@@ -34,17 +34,17 @@ Specifically useful:
 2. **Fork and edit.** Markdown only, no build step.
 3. **Keep the voice.** Short sentences, plain words, no jargon without an explanation. The audience has never written code.
 4. **Use real numbers.** Version numbers, timings, error messages. "It worked after about 20 minutes on my machine" beats "it was fast."
-5. **Mark uncertainty honestly.** If you don't know, say so. There's a whole section of the FAQ for that.
+5. **Mark uncertainty honestly.** If you don't know, say so. The FAQ has a section for that.
 
 ### Style
 
 - Third person or "you". Never first person plural.
-- British or American spelling, be consistent within a file.
+- British or American spelling, consistent within a file.
 - Sentence case for headings.
 - Backticks for file names, commands, and log output.
 - Tables for anything you'd otherwise compare in a list.
 
-Match the tone of the existing guides. They're deliberately plain, and they say "members report" rather than asserting facts they can't back up. That's not timidity, it's how you stay useful when things change.
+Match the tone of the existing guides. They're deliberately plain, and they say "members report" rather than asserting facts they can't back up. That keeps them useful when things change.
 
 ## Where things go
 
@@ -63,11 +63,19 @@ Match the tone of the existing guides. They're deliberately plain, and they say 
 | Getting a project seen | [10-posting-your-project.md](guides/10-posting-your-project.md) |
 | Project files people copy | `templates/` |
 
-## Things that are actually debated
+## Open debates
 
-[Guide 4](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words) has a long open section on whether detailed prompts or short loose prompts work better. Members disagree sharply. If you run a controlled comparison, that's a genuinely useful contribution and we want it. Post the results in [#support-help](https://discord.gg/ccFpNC26Ts) or open a pull request.
+[Guide 4](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words) has a long section on whether detailed prompts or short loose prompts work better. Members disagree sharply. If you run a controlled comparison, that would be a useful contribution and we want it. Post the results in [#support-help](https://discord.gg/ccFpNC26Ts) or open a pull request.
 
 [Guide 8](guides/08-mod-loaders-and-script-extenders.md) is missing plenty. If you know that a game has a good modding setup that isn't listed, add it. Include the loader, its language, and a link.
+
+## Known false positives
+
+These guides are checked with anti-slop scanners, which occasionally flag things that are correct here:
+
+- **Discord nicknames.** A quoted attribution like `**Iroquois [MLBB]:**` trips the "bracket scaffold" rule. Keep the real nickname rather than rewriting it to satisfy a scanner.
+- **The FAQ's "No." and "Yes." answers.** A yes/no question deserves a yes/no answer. Soften them and the answer gets worse.
+- **"number one" in guide 8**, where it means "the most common problem" rather than a product claim.
 
 ## Licence
 

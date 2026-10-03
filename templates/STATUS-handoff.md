@@ -2,7 +2,7 @@
 
 Use this when a chat is stuck, confused, or very long. Ask the agent to fill it in, save it as `STATUS.md`, then open a **fresh chat** and give it the file.
 
-This is the single highest-value trick in the whole workflow. It works because long chats carry their entire history on every turn, which burns your usage limit and gives the model a pile of context that includes every wrong turn you took. A fresh chat plus this file gives it only what matters.
+This is the highest-value trick in the whole workflow. It works because long chats carry their entire history on every turn, which burns your usage limit and hands the model a pile of context that includes every wrong turn you took. A fresh chat plus this file gives it only what matters.
 
 ## Prompt to get the agent to write it
 
@@ -62,7 +62,7 @@ Three reasons:
 
 1. **Your usage limit.** Long chats re-read the whole transcript every turn. A fresh chat with a 2 KB file is much cheaper than turn 400 of an argument.
 2. **No sunk cost.** The old chat has already committed to an approach and will keep defending it. A fresh chat has no ego attached.
-3. **The agent can plan.** With a clean statement of the problem it can offer genuinely different approaches. In a long chat it tends to keep tweaking the failing thing.
+3. **The agent can plan.** Given a clean statement of the problem it can offer a different approach. In a long chat it tends to keep tweaking the failing thing.
 
 Members report this works best with the less capable models, but everyone uses it.
 
@@ -70,13 +70,13 @@ Members report this works best with the less capable models, but everyone uses i
 
 - Before you stop for the night, so you can pick up tomorrow without rereading the chat
 - Before switching models or tools
-- Before asking for help in a forum or Discord thread — the STATUS file *is* the bug report
+- Before asking for help in a forum or Discord thread; the STATUS file *is* the bug report
 - When the agent has clearly lost the plot
 
 ## Keeping chat size down generally
 
-- Start a fresh chat when you switch topics, not just when you're stuck.
-- Ask the agent to update `MODLOG.md` as it works. The log is your long-term memory; the chat doesn't have to be.
+- Start a fresh chat when you switch topics, not only when you're stuck.
+- Ask the agent to update `MODLOG.md` as it works. The log is your long-term memory, so the chat doesn't have to be.
 - Keep the rules in `AGENTS.md` rather than retyping them every session.
 
 See [`MODLOG-template.md`](MODLOG-template.md) for the running log and [`AGENTS-starter.md`](AGENTS-starter.md) for the rules file.

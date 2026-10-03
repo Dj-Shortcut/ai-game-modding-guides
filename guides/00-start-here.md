@@ -4,16 +4,16 @@ You have never done this before and want to know what's involved. This page is t
 
 Stuck on something specific to your setup? Ask in [#support-help](https://discord.gg/ccFpNC26Ts) on the [chasm server](https://discord.gg/ccFpNC26Ts).
 
-## What you're actually doing
+## What you do
 
-You are not writing the code. You tell an AI agent what you want, it writes and builds the code, and you test the result by playing. Your job is to:
+The agent writes the code. You tell it what you want, it writes and builds, and you test the result by playing. Your job:
 
 - decide what you want
 - describe it and describe problems clearly
-- playtest, because the AI can't really see or feel a game
+- playtest, because the agent can't see or feel a game
 - keep the project organized so you can recover when something goes wrong
 
-Experienced members say the core of it is simple: install the games, open an agent, give it an example project, and say what you want. It is not a two-step process in practice, though. Expect to hit problems and spend most of your time fixing them with the agent.
+Experienced members say the core of it is simple: install the games, open an agent, give it an example project, and say what you want. In practice that turns into a long series of problems to fix with the agent. Expect that.
 
 ## Pick your path
 
@@ -21,17 +21,17 @@ Experienced members say the core of it is simple: install the games, open an age
 |--------------|------|------------|
 | Put one game's gameplay inside another (Minecraft in Skyrim, Skate 3 in GTA) | [Passthrough mods](02-passthrough-mods.md) | Both games run at once and talk to each other |
 | Rebuild a game's engine so it runs on its own | [Rust rewrites](03-rust-rewrites-and-ports.md) | Bigger job. Reads your game files at runtime |
-| Just play what others made | See the share forum on the [Discord](https://discord.gg/ccFpNC26Ts) | Use the project's own install instructions |
+| Play what others made | Share forum on the [Discord](https://discord.gg/ccFpNC26Ts) | Use the project's own install instructions |
 
-If you're not sure, start with a passthrough mod. It's usually the faster way to see something working.
+Start with a passthrough mod if you're unsure. You see something working sooner.
 
-### Three shortcuts, in order
+### Three pages worth reading first
 
-These three pages answer most of the questions people arrive with, so read them before anything else:
+These answer most of the questions people arrive with:
 
-1. **[Which loaders and script extenders exist](08-mod-loaders-and-script-extenders.md)** — decides whether your game idea is even realistic. This is the single most repeated question in the server.
-2. **[A full passthrough walkthrough](09-worked-example-passthrough-mod.md)** — the whole process end to end, with the prompts.
-3. **[Posting your project](10-posting-your-project.md)** — what a finished project needs before others can use it.
+1. **[Which loaders and script extenders exist](08-mod-loaders-and-script-extenders.md)**: decides whether your game idea is even realistic. This is the most repeated question on the server.
+2. **[A full passthrough walkthrough](09-worked-example-passthrough-mod.md)**: the whole process end to end, with the prompts.
+3. **[Posting your project](10-posting-your-project.md)**: what a finished project needs before others can use it.
 
 ## The steps, in order
 
@@ -57,8 +57,8 @@ These three pages answer most of the questions people arrive with, so read them 
 - [ ] I own the games and they're installed
 - [ ] They are single-player or offline
 - [ ] The host game has a [mod loader or script extender](08-mod-loaders-and-script-extenders.md)
-- [ ] I've picked an AI agent (not just a chat website)
-- [ ] I created a folder just for this project
+- [ ] I've picked an AI agent rather than a chat website
+- [ ] I created a folder for this project
 - [ ] I know I'll playtest myself
 - [ ] I've read the rules in [guide 6](06-rules-legal-and-publishing.md)
 

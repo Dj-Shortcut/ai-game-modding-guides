@@ -8,13 +8,13 @@ Quick answers to the questions people ask most. Answers come from experienced me
 Read [Start here](00-start-here.md). The short version: set up an AI agent, install your games, open the agent in an empty folder, give it an example project, and say what you want.
 
 **Is it really just "tell the AI to do it"?**
-For the core idea, yes. Members who've made these projects say they link an example repo and say they want the same for their games. But expect to hit problems, and expect to spend most of your time fixing them with the agent. See [guide 4](04-prompting-and-workflow.md).
+For the core idea, yes. Members who have made these projects say they link an example repo and ask for the same thing with their games. Expect to hit problems anyway, and expect to spend most of your time fixing them with the agent. See [guide 4](04-prompting-and-workflow.md).
 
 **Do I need to know how to code?**
 No, but it helps. You need to be clear about what you want and what's wrong, and you can ask the agent to explain anything. Members with no coding background have gotten projects working. A little knowledge helps you check what the AI is doing.
 
 **I have never written code. Am I going to be stuck?**
-Less than you think, if you accept the split: the agent writes it, you playtest it and describe what happened. That's it. It's also why [guide 4](04-prompting-and-workflow.md) and [guide 5](05-testing-and-troubleshooting.md) are mostly about *communicating problems*, not about programming.
+Less than you think, if you accept the split: the agent writes it, you playtest it and describe what happened. That's the whole job. It's also why [guide 4](04-prompting-and-workflow.md) and [guide 5](05-testing-and-troubleshooting.md) are mostly about *communicating problems* rather than programming.
 
 **Can I make a completely new game instead?**
 Yes. One member is building a basketball game from scratch with open-source assets and animations. The same agent workflow applies.
@@ -34,7 +34,7 @@ No. Rocket League is an online game with anti-cheat, which puts it out of scope.
 Maybe. It depends mostly on whether the host game can run your code (script extender, mod loader, plugin system) and whether it's single-player. Members have reported projects like Elden Ring and Spider-Man mechanics and an Octane-style car in Minecraft, but nothing is guaranteed. Search for existing projects and tools for your games first.
 
 **What games are easiest to start with?**
-Minecraft, Skyrim, and Fallout 4, by a wide margin. They have the best-documented loaders in gaming: Fabric for Minecraft, SKSE for Skyrim, F4SE for Fallout 4. Every beginner passthrough project in the server is built on them.
+Minecraft, Skyrim, and Fallout 4, by a wide margin. They have the best-documented loaders in gaming: Fabric for Minecraft, SKSE for Skyrim, F4SE for Fallout 4. Every beginner passthrough project on the server is built on them.
 
 **What are the hardest?**
 Games with no mod loader and no source. If the host game has nothing, you're reverse engineering an engine before you can start. See [guide 8](08-mod-loaders-and-script-extenders.md).
@@ -66,16 +66,16 @@ Yes. The whole conversation is carried along on every turn, so a 300-turn chat c
 One experienced member says local models don't work well for this. If you've tried it, please write it up.
 
 **My GPU doesn't matter then, right?**
-Correct, for cloud models. A 5090 doesn't change anything if you're using Claude or GPT — the work happens on the provider's servers. It only matters if you're running a local model.
+Correct, for cloud models. A 5090 doesn't change anything if you're using Claude or GPT, because the work happens on the provider's servers. It only matters if you're running a local model.
 
 **How do I give Codex full access? It keeps failing.**
 Check Codex's documentation for its permission and sandbox settings. Give it access to your project and game folders only. Full access to your whole PC is risky.
 
 **Is giving an agent full PC access safe?**
-Many members do it, but it's a real risk. Use a separate folder, Git, backups, and consider a separate user account, a VM, or a container. See [guide 1](01-choose-and-set-up-an-ai-agent.md).
+Many members do it, but it's a real risk. Use a separate folder, Git, and backups. Consider a separate user account, a VM, or a container. See [guide 1](01-choose-and-set-up-an-ai-agent.md).
 
 **Do I even need an IDE?**
-No, but one experienced member recommends VS Code so you get proper versioning and file views. The agent will create your files and run your builds either way — you don't copy code into folders by hand.
+No, but one experienced member recommends VS Code so you get proper versioning and file views. The agent will create your files and run your builds either way. You don't copy code into folders by hand.
 
 ## Technical
 
@@ -83,13 +83,13 @@ No, but one experienced member recommends VS Code so you get proper versioning a
 Usually not. For a SkyCraft-style passthrough mod you need a way to run code inside the host game, not decompilation. For rewrites, check for existing format documentation and open-source readers first; decompiling is a last resort. [Guide 3](03-rust-rewrites-and-ports.md) covers when and how, including which tool to use.
 
 **Which tool is best for decompiling: IDA Pro, Ghidra, or Binary Ninja?**
-Ghidra is free, open source, and the one members actually use. IDA Pro is the commercial standard. Binary Ninja sits in between. You can also just ask your agent which tool fits your game's format and let it set it up.
+Ghidra is free, open source, and the one members actually use. IDA Pro is the commercial standard. Binary Ninja sits in between. You can also ask your agent which tool fits your game's format and let it set it up.
 
 **Can Unreal Engine games be decompiled?**
-Nobody has a confirmed answer in the server. UE4SS exists as a modding and introspection tool, which gets you a long way without decompiling. Ask your agent to check for existing community tooling for your specific title.
+Nobody on the server has a confirmed answer. UE4SS exists as a modding and introspection tool, which gets you a long way without decompiling. Ask your agent to check for existing community tooling for your specific title.
 
 **Why Rust and Bevy? Why not C or C++?**
-You don't have to use them. People use them because Rust catches memory mistakes before the game runs, it's easy to set up, Bevy is a free all-code engine, and AI is good at fixing Rust. C and C++ work fine too. The plugins that go inside Skyrim, Fallout 4, and GTA are still C++.
+You don't have to use them. People reach for them because Rust catches memory mistakes before the game runs, setup is easy, Bevy is a free all-code engine, and AI is good at fixing Rust. C and C++ work fine too. The plugins that go inside Skyrim, Fallout 4, and GTA are still C++.
 
 **Do I just download Rust and write my own stuff?**
 For a rewrite you'd install Rust, but the agent writes the code. You also need the game installed and an agent set up.
@@ -98,7 +98,7 @@ For a rewrite you'd install Rust, but the agent writes the code. You also need t
 Tell it you'll playtest, and have it log numbers and events instead. See [guide 5](05-testing-and-troubleshooting.md).
 
 **How do I make it run smoother?**
-Give the agent frame-time logs from both processes and ask it to profile before changing anything. One member's project got a large frame-rate gain purely from skipping the hidden window's presentation step. Run the gameplay game headless if you can.
+Give the agent frame-time logs from both processes and ask it to profile before changing anything. One member's project got a large frame-rate gain from skipping the hidden window's presentation step. Run the gameplay game headless if you can.
 
 **The mod works but it's janky. Is that normal?**
 Yes, at first. Members describe their projects as "jank as hell but working." Performance and polish come after it functions.
@@ -130,7 +130,7 @@ These came up and nobody has given a confirmed answer. If you know, post it in [
 - Which free model works best with OpenCode?
 - Whether free plans can complete a real project
 - How to decompile Unreal Engine games
-- Whether detailed prompts or short loose prompts are more efficient (people disagree — see the debate section in [guide 4](04-prompting-and-workflow.md))
+- Whether detailed prompts or short loose prompts are more efficient (people disagree; see the debate section in [guide 4](04-prompting-and-workflow.md))
 - Making games run better on original hardware (such as PS3), and whether emulator research applies
 - Whether local models can handle a real project on a 12 GB GPU
 

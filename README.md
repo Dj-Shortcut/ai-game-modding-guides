@@ -2,10 +2,10 @@
 
 Beginner guides for two kinds of project, both built with an AI coding agent:
 
-- **Passthrough mods** — two games running at once and linked together, like SkyCraft (Minecraft inside Skyrim).
-- **Rust rewrites and ports** — rebuilding a game's engine in Rust so it reads data from your own copy, like hl2-rs.
+- **Passthrough mods:** two games running at once and linked together, like SkyCraft (Minecraft inside Skyrim).
+- **Rust rewrites and ports:** rebuilding a game's engine in Rust so it reads data from your own copy, like hl2-rs.
 
-These guides are written from the questions people actually asked on the [chasm server](https://discord.gg/ccFpNC26Ts). If something is missing or wrong, [open an issue](CONTRIBUTING.md) or send a pull request.
+These guides answer the questions people asked on the [chasm server](https://discord.gg/ccFpNC26Ts). If something is missing or wrong, [open an issue](CONTRIBUTING.md) or send a pull request.
 
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE)
 [![Contributing welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -18,9 +18,9 @@ These guides are written from the questions people actually asked on the [chasm 
 
 ## Start here
 
-If you have never done this before, read **[Start here](guides/00-start-here.md)**.
+Never done this before? Read **[Start here](guides/00-start-here.md)**.
 
-If you just want an answer, go straight to the **[FAQ](guides/07-faq.md)**.
+Want an answer rather than a read? Go to the **[FAQ](guides/07-faq.md)**.
 
 ## The short version
 
@@ -51,10 +51,10 @@ If you just want an answer, go straight to the **[FAQ](guides/07-faq.md)**.
 
 Drop these into your own project.
 
-- [`templates/AGENTS-starter.md`](templates/AGENTS-starter.md) — rules file that makes the agent follow your rules every session
-- [`templates/STATUS-handoff.md`](templates/STATUS-handoff.md) — the note you give a fresh chat when the old one gets stuck or bloated
-- [`templates/MODLOG-template.md`](templates/MODLOG-template.md) — a running log of what changed and what was tested
-- [`templates/workflow-writeup.md`](templates/workflow-writeup.md) — for sharing how you actually made your project
+- [`templates/AGENTS-starter.md`](templates/AGENTS-starter.md): a rules file that makes the agent follow your rules every session
+- [`templates/STATUS-handoff.md`](templates/STATUS-handoff.md): the note you give a fresh chat when the old one gets stuck
+- [`templates/MODLOG-template.md`](templates/MODLOG-template.md): a running log of what changed and what was tested
+- [`templates/workflow-writeup.md`](templates/workflow-writeup.md): for sharing how you made your project
 
 ## Examples worth studying
 
@@ -74,13 +74,13 @@ Finished open-source engine reimplementations, if you want to see what the long 
 
 ## Who these guides are for
 
-People who have never written code and want to try something anyway. You don't need to be a programmer to start, and you don't need to learn Rust, or reverse engineering, or any of it up front.
+People who have never written code and want to try something anyway. You don't need to be a programmer to start, and you don't need Rust or reverse engineering either.
 
-You do need to be willing to describe problems clearly and to spend most of your time playtesting and reporting back. That's the actual job.
+You do need to be willing to describe problems clearly and to spend most of your time playtesting and reporting back. That is the job.
 
 ## Get help
 
-Guides can only cover so much. For anything specific to your setup, ask in **[#support-help](https://discord.gg/ccFpNC26Ts)** on the [chasm server](https://discord.gg/ccFpNC26Ts) — that's where people post problems, and where the answers get turned into better guides.
+Guides can only cover so much. For anything specific to your setup, ask in **[#support-help](https://discord.gg/ccFpNC26Ts)** on the [chasm server](https://discord.gg/ccFpNC26Ts). That's where people post problems, and where the answers get turned into better guides.
 
 Include your games and exact versions, the loaders, the agent and model, what you tried, and the logs. If the chat got stuck, the `STATUS.md` trick in [guide 4](guides/04-prompting-and-workflow.md#the-handoff-trick-for-stuck-chats) writes most of that for you.
 
@@ -88,18 +88,18 @@ Corrections to the guides themselves are better as a pull request. See [CONTRIBU
 
 ## Open questions
 
-Some things in here genuinely aren't settled. If you know the answer, post it in [#support-help](https://discord.gg/ccFpNC26Ts):
+Nobody has settled these. If you know the answer, post it in [#support-help](https://discord.gg/ccFpNC26Ts):
 
 - Does a detailed prompt or a short loose one work better? [Both camps are quoted here.](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words)
-- Which free model can actually finish a project?
+- Which free model can finish a project?
 - How do you handle Unreal Engine games?
 - Can local models handle a real project on a 12 GB GPU?
 
 ## Contributing
 
-Experienced developers are very welcome — a lot of what people complain about is missing. Technical write-ups, corrections, dead ends worth documenting, and workflow examples all help.
+Experienced developers are welcome. Technical write-ups, corrections, dead ends worth documenting, and workflow examples all help.
 
-To fix a typo or a broken link, [edit the page on GitHub](CONTRIBUTING.md#how-to-contribute) — you don't need to clone anything.
+To fix a typo or a broken link, [edit the page on GitHub](CONTRIBUTING.md#how-to-contribute). You don't need to clone anything.
 
 ## Disclaimer
 
@@ -109,6 +109,6 @@ Everything described here is for single-player and offline games that you own. N
 
 ## Licence and attribution
 
-Guides: [MIT](LICENSE). Linked projects keep their own licences — check each one before reusing its code.
+Guides: [MIT](LICENSE). Linked projects keep their own licences, so check each one before reusing its code.
 
-If you write a guide based on one of these, credit it by name and keep its licence. FalloutCraft and OWCraft both credit SkyCraft that way, and it's the standard worth holding to.
+If you write a guide based on one of these, credit it by name and keep its licence. FalloutCraft and OWCraft both credit SkyCraft that way.

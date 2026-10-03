@@ -1,8 +1,8 @@
-# AGENTS.md — project rules for your AI agent
+# AGENTS.md: project rules for your AI agent
 
-Copy this to the root of your project as `AGENTS.md` and fill in the bracketed parts. The agent reads this every session, so anything you put here is a rule it will follow without being reminded.
+Copy this to the root of your project as `AGENTS.md` and fill in the bracketed parts. The agent reads this every session, so anything you put here becomes a rule it follows without being reminded.
 
-Every serious project in this space keeps one. It is the cheapest thing you can do to keep a long-running project on track.
+Every serious project in this space keeps one. It's the cheapest way to keep a long-running project on track.
 
 ---
 
@@ -14,7 +14,7 @@ Every serious project in this space keeps one. It is the cheapest thing you can 
 ## Project
 [One sentence: what this project does.]
 
-## Hard rules — never break these
+## Hard rules, never break these
 
 1. **Never write game assets, decompiled code, or extracted game files into this
    repository.** They stay on this machine, untracked. If you need to read game
@@ -25,10 +25,10 @@ Every serious project in this space keeps one. It is the cheapest thing you can 
 3. **Do not run `git commit` unless I asked.** Stage nothing beyond what the
    current task requires.
 4. **Do not touch anything outside this project folder** unless I explicitly name
-   the path. This includes my game installs — read them, never write to them.
+   the path. This includes my game installs: read them, never write to them.
 5. **Single-player / offline games only.** If this touches anti-cheat, online play,
    or DRM, stop and tell me.
-6. **Never put credentials in the repo or in any file you can read** — no API keys,
+6. **Never put credentials in the repo or in any file you can read:** no API keys,
    no tokens, no passwords.
 
 ## How to work
@@ -61,11 +61,11 @@ Every serious project in this space keeps one. It is the cheapest thing you can 
 
 ## Keep these files updated
 
-- `MODLOG.md` — add an entry after every change. Template in
+- `MODLOG.md`: add an entry after every change. Template in
   `templates/MODLOG-template.md`.
-- `docs/DESIGN.md` — how the project works, in plain language. Update when the
+- `docs/DESIGN.md`: how the project works, in plain language. Update when the
   architecture changes, not on every commit.
-- `README.md` — the "what works / what doesn't work" list. Test before you claim
+- `README.md`: the "what works / what doesn't work" list. Test before you claim
   something works.
 
 ## Environment
@@ -84,16 +84,16 @@ Every serious project in this space keeps one. It is the cheapest thing you can 
 
 | Rule | Reason |
 |------|--------|
-| No game files in the repo | It's the one rule you can get a takedown notice for. FalloutCraft and OWCraft both ship extractors instead of data for this reason. |
-| Whitelist `.gitignore` | A normal ignore list has to be updated every time you discover a new file type. A whitelist can't accidentally commit extracted data. gang-beasts-rust does this. |
+| No game files in the repo | It's the one rule that gets a takedown notice. FalloutCraft and OWCraft both ship extractors instead of data for this reason. |
+| Whitelist `.gitignore` | A normal ignore list needs updating every time you find a new file type. A whitelist can't accidentally commit extracted data. gang-beasts-rust does this. |
 | Don't commit unless asked | You want to review the diff before it becomes history. |
 | Stay in the project folder | Agents with broad access will happily rewrite a config file you care about. |
 | Single-player only | Banned accounts. Not negotiable. |
 | No credentials | Agents read everything in the working directory. |
 | Plan first | Long sessions go wrong when the model changes its mind halfway. |
-| Log, don't look | The agent genuinely cannot see the game. Numbers are the only feedback channel it has. |
+| Log, don't look | The agent cannot see the game. Numbers are the only feedback channel it has. |
 | Write "not tested" | An unverified claim in a README wastes someone else's afternoon. |
-| Stop after two attempts | Looping burns your usage cap and produces random variations instead of a different approach. |
+| Stop after two attempts | Looping burns your usage cap and produces random variations rather than a different approach. |
 
 ## Customising it
 

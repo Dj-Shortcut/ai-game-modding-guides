@@ -2,10 +2,10 @@
 
 ## You do the playtesting
 
-The agent can't watch a game in real time, so it's poor at judging how things look and feel. It may not notice a missing particle effect, a wrongly rotated model, or janky movement. Experienced members handle this in two ways:
+The agent can't watch a game in real time, so it's poor at judging how things look and feel. It may not notice a missing particle effect, a wrongly rotated model, or janky movement. Experienced members handle this two ways:
 
 - **Ask for telemetry.** Have the agent log as much as possible (positions, damage numbers, events, frame times) so it can check its own work without looking at the screen. One member has the agent read damage numbers from the logs while hitting a training dummy.
-- **Playtest yourself.** If the agent tries to test visually, stop it and say you'll playtest. It's the fastest way to verify things anyway.
+- **Playtest yourself.** If the agent tries to test visually, stop it and say you'll playtest. You verify faster than it can, either way.
 
 Sorting out UI and menus early also helps, because it makes testing simpler later.
 
@@ -42,7 +42,7 @@ Check that tool's documentation for permission or sandbox settings. Give it acce
 Plans have a roughly 5-hour reset window and a weekly limit. Start fresh chats with handoff files, and check your provider's current plans.
 
 **The AI refuses.**
-Read the reason. If it's about anti-cheat or online games, the answer is no. Those aren't supported. If it's a single-player mod with your own copy of the game, say that plainly and describe your goal honestly. Don't try to disguise what you're doing, and don't try to get around DRM or anti-cheat.
+Read the reason. If it's about anti-cheat or online games, the answer is no, and those aren't supported. If it's a single-player mod with your own copy of the game, say that plainly and describe your goal honestly. Don't try to disguise what you're doing, and don't try to get around DRM or anti-cheat.
 
 **The game crashes or my save broke.**
 Back up your saves before testing. Several projects warn that they're early and experimental. Roll back using Git. Check the project's known limitations.
@@ -54,7 +54,7 @@ Mods and extractors are tied to specific game versions. Some games need a downgr
 Unsigned tools and bundled launchers are sometimes flagged. In one SkyCraft issue, a user reported a Malwarebytes flag on a release zip that didn't show up on a re-scan, and an online scanner showed no detections. It's still worth checking where a file came from and opening an issue on the project.
 
 **It works but it's slow or stutters.**
-Expected, and usually fixable. Ask for frame-time logs from both processes and tell it to profile before changing anything. One member's project got a large frame-rate gain purely from skipping the hidden window's presentation step. Running the gameplay game headless, sending deltas instead of full state, and fixing your update rate are the other usual wins. See [guide 9](09-worked-example-passthrough-mod.md#step-8-make-it-not-stutter).
+Expected, and usually fixable. Ask for frame-time logs from both processes and tell it to profile before changing anything. One member's project got a large frame-rate gain from skipping the hidden window's presentation step. Running the gameplay game headless, sending deltas instead of full state, and fixing your update rate are the other usual wins. See [guide 9](09-worked-example-passthrough-mod.md#step-8-make-it-not-stutter).
 
 **The mod works for me but not for a friend.**
 Check that they have both games, the right versions, and the same loaders installed. Ask them for logs.
@@ -72,7 +72,7 @@ Post in [#support-help](https://discord.gg/ccFpNC26Ts) on the Discord, or open a
 - what you tried
 - the error message or logs
 
-A `STATUS.md` written by the handoff trick in [`templates/STATUS-handoff.md`](../templates/STATUS-handoff.md) already contains most of that. It's the fastest way to get a useful answer, and it works in a Discord thread or a GitHub issue just as well as it does in a fresh chat.
+A `STATUS.md` written by the handoff trick in [`templates/STATUS-handoff.md`](../templates/STATUS-handoff.md) already contains most of that. Answers come back quicker, and it works in a Discord thread or a GitHub issue just as well as in a fresh chat.
 
 ---
 

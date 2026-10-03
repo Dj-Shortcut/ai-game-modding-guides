@@ -13,7 +13,7 @@ Say you want Minecraft inside Skyrim:
 
 Because both games run together, **every player needs a copy of both**.
 
-One member described the idea well: it isn't a normal mod where one game contains the other's content. It's two games exchanging state, and neither works without the other running.
+One member described the idea well: two games exchanging state, where neither works without the other running. A normal mod would have one game containing the other's content.
 
 ## Examples to study
 
@@ -32,17 +32,17 @@ Most of these are built on SkyCraft's design, so SkyCraft is the usual starting 
 
 **Does the host game have a mod loader or script extender?**
 
-If yes, this is a realistic weekend project. If no, the agent has to reverse engineer the game first, which is a much bigger job and belongs in [guide 3](03-rust-rewrites-and-ports.md) territory.
+With one, this is a realistic weekend project. Without one, the agent has to reverse engineer the game first, and that belongs in [guide 3](03-rust-rewrites-and-ports.md).
 
 Check the table in [guide 8](08-mod-loaders-and-script-extenders.md) before you commit. Skyrim and Fallout 4 have SKSE and F4SE, Minecraft has Fabric, most Unity games have BepInEx or MelonLoader, and most Unreal games have UE4SS. That list is why SkyCraft-style projects are as common as they are.
 
 ## Do I need to decompile anything?
 
-Experienced members say **not necessarily**. For a SkyCraft-style mod, you point the agent at the SkyCraft project and say you want the same thing for your games. The agent works out the rest.
+Usually not. For a SkyCraft-style mod, you point the agent at the SkyCraft project and say you want the same thing for your games. The agent works out the rest.
 
-What you do need is a **way to run your own code inside the host game**: a script extender (SKSE for Skyrim, F4SE for Fallout 4), a mod loader (Outer Wilds Mod Loader), or a plugin SDK (plugin-sdk for GTA San Andreas). If your host game has one, the job is much easier.
+What you do need is a **way to run your own code inside the host game**: a script extender (SKSE for Skyrim, F4SE for Fallout 4), a mod loader (Outer Wilds Mod Loader), or a plugin SDK (plugin-sdk for GTA San Andreas). With one of those, the job is much easier.
 
-If it doesn't have one, the agent may have to reverse engineer the game. Members do use the agent to decompile with a tool like Ghidra when it's needed, and [guide 3](03-rust-rewrites-and-ports.md#do-i-need-to-decompile) covers how that works. Ask the agent to check what your game supports before it starts.
+Without one, the agent may have to reverse engineer the game. Members do use the agent to decompile with a tool like Ghidra when it's needed, and [guide 3](03-rust-rewrites-and-ports.md#do-i-need-to-decompile) covers how that works. Ask the agent to check what your game supports before it starts.
 
 ## Step by step
 
@@ -78,7 +78,7 @@ You can add more later, like what features you want first.
 
 ## If it gets stuck
 
-You don't have to follow this, but if the agent keeps going in circles, a smaller goal often helps. A common order:
+Not a rule, but useful: when the agent goes in circles, aim for a smaller goal. A common order:
 
 1. Get your code loading inside the host game and writing a line to a log.
 2. Send one piece of data from one game to the other (like the player's position).
@@ -90,14 +90,14 @@ Steps 1 and 2 are the whole trick. Once one value crosses between the games, the
 
 ## What to expect
 
-- **It will be rough at first.** Several early projects describe themselves as experimental. Back up your saves.
+- **It starts rough.** Several early projects describe themselves as experimental. Back up your saves.
 - **Versions matter.** Mods are tied to game versions. Write down which versions you tested. GTA San AnSkateas needs GTA San Andreas at version 1.0, not the current Steam version.
-- **Performance can need tuning.** You're running two games and a message channel at once. For example, OWCraft's notes mention a big frame-rate gain from skipping a hidden window's presentation. The agent can find this kind of thing if you give it frame-time logs.
-- **Multiplayer isn't a given.** FalloutCraft lists multiplayer as not ported yet — and it isn't going to be. These are single-player projects.
+- **Performance needs tuning.** You're running two games and a message channel at once. OWCraft's notes mention a large frame-rate gain from skipping a hidden window's presentation. Give the agent frame-time logs and it can find things like that.
+- **Multiplayer isn't coming.** FalloutCraft lists multiplayer as not ported, and it won't be. These are single-player projects.
 
 ## Ideas that don't work, and why
 
-Coming up in the server constantly:
+These come up on the server constantly:
 
 | Idea | Why not |
 |------|---------|
@@ -106,7 +106,7 @@ Coming up in the server constantly:
 | Any online or multiplayer game | Out of scope entirely. See [guide 6](06-rules-legal-and-publishing.md) |
 | A host game with no mod loader and no source | You'd be reverse engineering the whole engine first |
 
-Being told no here saves you a weekend. [Guide 8](08-mod-loaders-and-script-extenders.md) will tell you which games have the loaders you need.
+Being told no here saves you a weekend. [Guide 8](08-mod-loaders-and-script-extenders.md) lists which games have the loaders you need.
 
 ---
 

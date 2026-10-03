@@ -38,7 +38,7 @@ Reverse engineering is a normal part of this work, and [guide 3](03-rust-rewrite
 **Fine:**
 - Studying a game you own, on your own machine, for your own use
 - Using decompilers and format documentation to understand file formats
-- Publishing your *findings* as documentation — that's how OpenMW and OpenRCT2 exist
+- Publishing your *findings* as documentation, which is how OpenMW and OpenRCT2 exist
 - Building extractors so other players read their own copies
 
 **Not fine:**
@@ -62,9 +62,9 @@ If a rights holder asks you to change or remove something, do it. gang-beasts-ru
 
 ## Publishing on the server
 
-The share forum has rules. In short:
+The share forum has rules:
 
-- **A GitHub repo link is recommended** if you want others to be able to use your work, but it isn't required. Don't upload files or link direct downloads or file hosts.
+- **A GitHub repo link is recommended** if you want others to use your work, but it isn't required. Don't upload files or link direct downloads or file hosts.
 - No ripped assets, leaked code, or links to pirated or leaked material.
 - Use the tags and the template from the pinned guidelines post.
 - Say what games and versions your project needs.
@@ -90,7 +90,7 @@ The share forum has rules. In short:
 
 ## If you already pushed something you shouldn't have
 
-Git history is public the moment you push. Full recovery steps are in [guide 10](10-posting-your-project.md#if-you-already-committed-game-files). Assume anything pushed was copied — a history rewrite alone doesn't remove it from anyone who already cloned.
+Git history is public the moment you push. Full recovery steps are in [guide 10](10-posting-your-project.md#if-you-already-committed-game-files). Assume anything pushed was copied. A history rewrite alone doesn't remove it from anyone who already cloned.
 
 ---
 
