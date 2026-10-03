@@ -37,7 +37,7 @@ These answer most of the questions people arrive with:
 
 1. **Pick your games.** Check that they're single-player or offline, and that you own them.
 2. **Search for existing work first.** Look for mod loaders, existing mods, or decomp projects for your games. Two members said they wasted hours by skipping this.
-3. **Set up an AI agent** on your PC. See [guide 1](01-choose-and-set-up-an-ai-agent.md).
+3. **Set up an AI agent** on your PC. See [guide 1](01-choose-and-set-up-an-ai-agent.md). Costs and model choice are in [guide 11](11-models-and-cost.md).
 4. **Install the games** and make sure they run normally.
 5. **Open the agent in a new, empty project folder** and use a starter prompt from guide 2 or 3.
 6. **Playtest and report back.** Describe what happened, paste logs.

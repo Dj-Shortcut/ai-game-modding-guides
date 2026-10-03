@@ -49,6 +49,7 @@ Want an answer rather than a read? Go to the **[FAQ](guides/07-faq.md)**.
 | 8 | [Mod loaders and script extenders](guides/08-mod-loaders-and-script-extenders.md) | You need to know what you can install, or whether your idea is possible |
 | 9 | [Worked example: a passthrough mod, start to finish](guides/09-worked-example-passthrough-mod.md) | You want the whole process with the actual prompts |
 | 10 | [Posting your project](guides/10-posting-your-project.md) | You've got something that runs and want people to use it |
+| 11 | [Models and what to spend](guides/11-models-and-cost.md) | You're deciding what to pay, or which model to point the agent at |
 
 ## Templates
 

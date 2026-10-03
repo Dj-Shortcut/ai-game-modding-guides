@@ -44,12 +44,13 @@ Models change quickly, so check what's current. What members report:
 
 ## Cost and usage limits
 
-Plans change often, so check the provider's current page. What members report:
+Plans change often, so check the provider's current page. **[Guide 11](11-models-and-cost.md) has our actual recommendations**, including which model to use at each budget. The short version: OpenCode Go at about $10 is the best value, Claude Pro at $20 is the best single subscription, and upgrading goes $20 then $100 then $200.
+
+What members report:
 
 - Paid plans have a short reset window (about 5 hours) and a weekly limit.
 - One member gets about 3-4 hours of constant use on the top Claude model out of each 5-hour window.
 - Another said the $20 tier was "more than enough" for a from-scratch basketball game.
-- Another suggested a $100 tier if you want to work for hours every day.
 - **Free tiers:** nobody has confirmed whether you can do a real project on one. Expect to hit limits fast. A pay-per-use API key (OpenRouter and similar) is the other option.
 - Long sessions use more of your limit, because the whole conversation is carried along. Start a fresh chat now and then with a short handoff note. See [guide 4](04-prompting-and-workflow.md).
 

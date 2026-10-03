@@ -69,10 +69,19 @@ The agent doesn't need the game running to read your files or write code. You do
 None to start. Claude Code and Codex are agents. MCP (Model Context Protocol) is a standard for plugging extra tools into an agent, and it's optional. None of the example projects list one as a requirement.
 
 **Can I use a free plan?**
-Not confirmed. Members expect to hit limits quickly. Pay-per-use API keys are another route. Check current plans.
+Not confirmed for a real project. Members expect to hit limits quickly. Free models inside OpenCode work for learning the workflow but get cut off and rate-limited. Pay-per-use API keys are another route. See [guide 11](11-models-and-cost.md).
+
+**What's the best value?**
+[OpenCode Go](https://opencode.ai/go) at $10, pointed at DeepSeek V4.1 Flash. Its allowance works out to roughly 26,000 requests per five-hour window on that model. If you're buying one subscription instead of paying per token, Claude Pro at $20 beats anything cheaper.
 
 **Will the $20 plan be enough?**
 Reports vary. One member says it's more than enough for a small project. Another gets about 3-4 hours of heavy use in each 5-hour window on the top model. It depends on how much you do.
+
+**Should I go straight to the $200 plan?**
+No. Upgrade in order: $20, max it out, then $100, then $200. Two things worth knowing before you do: the 5x and 20x multiples apply to the five-hour session window rather than your weekly allowance, and a weekly cap sits on top either way. See [guide 11](11-models-and-cost.md).
+
+**Are ChatGPT or OpenAI models any good?**
+They're very good and come with a decent allowance. We don't recommend them right now, because we get less capability and less usable usage per subscription than we do from Claude. If you already pay for one, there's no reason to cancel.
 
 **Do long chats burn my usage faster?**
 Yes. The whole conversation is carried along on every turn, so a 300-turn chat costs more per turn than a fresh one. Start a fresh chat with a [`STATUS-handoff.md`](../templates/STATUS-handoff.md) file when things get long. See [guide 4](04-prompting-and-workflow.md).
@@ -146,7 +155,7 @@ A screenshot or GIF, a real commit history, an honest "what doesn't work" sectio
 These came up and nobody has given a confirmed answer. If you know, post it on the Discord, or open a pull request and add it here.
 
 - Which free model works best with OpenCode?
-- Whether free plans can complete a real project
+- Whether free plans can complete a real project (see [guide 11](11-models-and-cost.md))
 - How to decompile Unreal Engine games
 - Whether detailed prompts or short loose prompts are more efficient (people disagree; see the debate section in [guide 4](04-prompting-and-workflow.md))
 - Making games run better on original hardware (such as PS3), and whether emulator research applies
