@@ -57,7 +57,7 @@ If you're unsure where a line is, ask. Nobody gets in trouble for asking first.
 
 Single-player and offline, always. Two things worth being precise about, because both come up:
 
-- **Rocket League is not a blanket no.** Easy Anti-Cheat is required for online play and mods don't run while it's on. With it off through the official option, offline matches, training, LAN, and replays work with mods. Anything online is still out.
+- Easy Anti-Cheat is required for online play and mods don't run while it's on. With it off through the official option, offline matches, training, LAN, and replays work with mods. Anything online is still out.
 - **Never publish anything that helps someone bypass anti-cheat.** Not a tool, not a config, not instructions.
 
 See [guide 2](02-passthrough-mods.md) for the Rocket League specifics.
