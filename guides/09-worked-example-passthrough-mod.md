@@ -1,8 +1,10 @@
 # 9. Worked Example: A Passthrough Mod, Start to Finish
 
-This walks through building a passthrough mod from nothing, using the same eight steps every time. The names are written as **Game A** (the host, which draws the world) and **Game B** (the gameplay game, which supplies the mechanics). Swap in your own.
+This walks through building a passthrough mod from nothing, using the same nine steps every time. The names are written as **Game A** (the host, which draws the world) and **Game B** (the gameplay game, which supplies the mechanics). Swap in your own.
 
-Traced against the real SkyCraft design so you can compare as you go.
+The architecture notes come from [SkyCraft's DESIGN.md](https://github.com/chasmlol/SkyCraft/blob/main/docs/DESIGN.md), so you can check them against the source. SkyCraft is Skyrim plus Minecraft, which maps to Game A and Game B below.
+
+**All of these examples are Windows-only.** Every one of the reference projects requires it, and hl2-rs says other operating systems are unverified. See [guide 8](08-mod-loaders-and-script-extenders.md#windows-is-the-common-denominator).
 
 ## Step 0: Pick a pair that can work
 
@@ -16,27 +18,30 @@ Game A (host) needs:
 Game B (gameplay) needs:
 - a mod API or SDK, or a headless server mode
 - gameplay that runs unseen: physics, inventory, combat
-- ideally a way to run without drawing anything
+- ideally a way to run without showing a window
 
 ### The pairs that go well
 
 | Game A (host) | Game B | Why it works |
 |---------------|--------|--------------|
-| Skyrim (SKSE) | Minecraft (Fabric) | This is SkyCraft. Both have excellent modding support, and Minecraft has a headless mode. |
-| Fallout 4 (F4SE) | Minecraft (Fabric) | FalloutCraft did exactly this as a fork of SkyCraft. |
-| Outer Wilds (mod loader) | Minecraft (Fabric) | OWCraft added a patch to make it work. |
-| GTA San Andreas (plugin-sdk) | Skate 3 (custom engine layer) | GTA San AnSkateas loads a Rust rebuild of Skate 3 rather than running Skate 3 itself. |
+| Skyrim (SKSE) | Minecraft (Fabric) | This is SkyCraft. Both have excellent modding support, and Minecraft has an integrated server. |
+| Fallout 4 (F4SE) | Minecraft (Fabric) | FalloutCraft did this as a port of SkyCraft. Its Fabric mod came from SkyCraft with FalloutCraft changes, so several features were never ported. |
+| Outer Wilds (OWML) | Minecraft (Fabric) | OWCraft added a patch to make it work. |
+| GTA San Andreas (plugin-sdk) | Skate 3 (custom engine layer) | GTA San AnSkateas loads a Rust rebuild of Skate 3's engine rather than running Skate 3 itself. Needs Skate 3 for Xbox 360 extracted from your own disc. |
 
 ### The pairs that will waste your time
 
 | Idea | Why not |
 |------|---------|
-| Anything with a Rocket League car | Rocket League is an online game with anti-cheat. Out of scope. See [guide 6](06-rules-legal-and-publishing.md). |
-| GTA x Rocket League | Same problem. |
-| Any online or multiplayer game | Same problem, plus it's a rule and not just a difficulty issue. |
+| Any online or multiplayer game as Game B | Out of scope. See [guide 6](06-rules-legal-and-publishing.md). |
+| Rocket League online play | Easy Anti-Cheat is required for online play, and mods don't run while it's on. Offline with EAC off is fine. See below. |
 | A game with no loader and no source | You'd be reverse engineering the whole thing first. That's the "rewrite" path, not passthrough. |
 
-Being told no here is a win. You saved a weekend.
+### Rocket League specifically
+
+Rocket League gets asked about constantly, so here's the accurate position. Easy Anti-Cheat is required for online play on PC. When EAC is on, mods don't run. When you turn it off, Psyonix's own support page says you can run mods during offline matches, training, LAN matches, and replays.
+
+So an offline Rocket League project is fine. Turn EAC off through the official option, never try to bypass it, and don't publish anything that helps people run mods in online matches.
 
 ## Step 1: Install and verify
 
@@ -110,12 +115,20 @@ Two games, one log line. Get that, and the rest is iteration.
 
 ## Step 5: Send one value across
 
-Build the chain one value at a time. Player position first, because it's easy to see and easy to verify:
+**Which game is authoritative matters, and the obvious answer is usually wrong.**
+
+The intuition is that the host game owns the player, because it's the one you look at. SkyCraft does the opposite: **Minecraft is authoritative for player position and physics.** Skyrim draws the world and provides collision, but the player puppet is moved to wherever Minecraft says.
+
+Decide this before you write the transport, because reversing it later means rewriting both halves.
+
+Player position first, because it's easy to see and easy to verify. Send it every render frame:
 
 ```
-Step 2: send the player's world position from Game A to Game B, once per frame.
-Use the same transport SkyCraft uses if you can. Log both the value you send
-and the value Game B receives, so I can compare them.
+Step 2: Minecraft is authoritative for player position. Each render frame,
+send its interpolated position (the partial-tick render position, not the raw
+20 TPS tick position) to Skyrim, which moves the player puppet to match.
+
+Log the value you send and the value Skyrim receives, so I can compare them.
 ```
 
 Then run both games and walk around. Check the log. Positions should match.
@@ -124,13 +137,19 @@ Then run both games and walk around. Check the log. Positions should match.
 
 This is where the architecture gets proven. Once one float crosses the boundary, the hard part is done.
 
+Two details worth copying from SkyCraft:
+
+- **Interpolated, not raw.** Minecraft ticks at 20 TPS but renders at your display rate. Send the render position, or movement looks like it steps.
+- **Frame lockstep.** Both sides disable their own frame caps and vsync, then sync on an explicit "begin frame N" signal. Without this the two games drift and you get stutter.
+
 ## Step 6: Send something back
 
-Now close the loop:
+Now close the loop. Skyrim tells Minecraft what the world is shaped like and where the NPCs are:
 
 ```
-Step 3: read the player's input or state in Game B and send it back so Game A
-can act on it. Log both directions.
+Step 3: send collision shapes from Skyrim near the player, plus NPC positions.
+Inject them into Minecraft's collision queries so Minecraft's own physics
+runs unchanged against Skyrim's geometry. Log both directions.
 ```
 
 Two games talking. Everything after this is features.
@@ -151,12 +170,14 @@ After each one: **playtest, then commit.** If a step breaks, `git revert` is ins
 
 ## Step 8: Make it not stutter
 
-Passthrough mods run two games and a message channel at once, so performance is the real enemy. One member's project got a large frame-rate gain from skipping the hidden window's presentation step. Things worth asking about:
+Passthrough mods run two games and a message channel at once, so performance is the real enemy.
 
-- Run Game B headless or fully hidden. No window, no rendering.
-- Send deltas rather than full state, if the values are large.
-- Fix your update rate. 20 Hz is usually plenty for position.
-- Log frame times from both processes and compare. Numbers beat guessing.
+**The gameplay game still renders.** It does not run headless. SkyCraft hides Minecraft's window but keeps rendering into offscreen textures, which get composited into the host's depth buffer so the host's walls correctly hide your blocks. "Run it with no rendering" breaks the whole visual premise.
+
+That makes the hidden window's *presentation* the first thing to look at. OWCraft skips presenting Minecraft's hidden window while linked, which took Minecraft from 25 to 60 fps. Other things worth asking about:
+
+- Send deltas rather than full state, if the values are large
+- Log frame times from both processes and compare. Numbers beat guessing
 
 ```
 Game A is dropping to 40fps. Frame times are in [log path]. Find the bottleneck
@@ -169,15 +190,15 @@ See [guide 10](10-posting-your-project.md) for posting it, and [guide 6](06-rule
 
 ## What actually happened, honestly
 
-- Members report 2 to 4 hours of back-and-forth before something playable, on a good pair with existing loaders.
-- You will hit a wall around step 5 or 6. Everyone does.
-- When you do: stop repeating prompts. Write a `STATUS.md`, open a fresh chat, hand it over. See [guide 5](05-testing-and-troubleshooting.md).
+- One member reported about 3-4 hours of back-and-forth before an Elden Ring + Spider-Man mashup worked, and called it jank but working. Treat that as one data point, not a typical runtime.
+- The wall people hit tends to be the first time something crosses the boundary and lands in the wrong coordinate space, or the two games' frame clocks drifting apart. Both are normal.
+- When you hit one: stop repeating prompts. Write a `STATUS.md`, open a fresh chat, hand it over. See [guide 5](05-testing-and-troubleshooting.md).
 
 ## The checklist
 
 - [ ] Game A has a loader and it loads someone else's known-good mod
 - [ ] Both games are single-player or offline, and you own them
-- [ ] Game B can run without drawing anything
+- [ ] You've decided which game is authoritative for the player
 - [ ] `git init` done, and you committed
 - [ ] `AGENTS.md` and `MODLOG.md` exist
 - [ ] Agent gave you a recon report before writing code

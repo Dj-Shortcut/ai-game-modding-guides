@@ -27,17 +27,32 @@ You tell the agent where the games are installed and it finds what it needs. Mem
 **How do I know if my idea is possible?**
 Check whether the host game has a mod loader or script extender. That's the main thing. See [guide 8](08-mod-loaders-and-script-extenders.md).
 
-**I want to put Rocket League into Minecraft / GTA. Can I?**
-No. Rocket League is an online game with anti-cheat, which puts it out of scope. This comes up constantly. Pick a single-player game for the gameplay side. See [guide 2](02-passthrough-mods.md).
+**I want to use Rocket League. Can I?**
+For offline play, yes. Easy Anti-Cheat is required for online play on PC and mods don't run while it's enabled. Turn it off through the official option and you can run mods in offline matches, training, LAN matches, and replays. Online matches with mods are out. Never try to bypass EAC. See [guide 2](02-passthrough-mods.md).
 
 **Can I merge game X with game Y?**
 Maybe. It depends mostly on whether the host game can run your code (script extender, mod loader, plugin system) and whether it's single-player. Members have reported projects like Elden Ring and Spider-Man mechanics and an Octane-style car in Minecraft, but nothing is guaranteed. Search for existing projects and tools for your games first.
 
 **What games are easiest to start with?**
-Minecraft, Skyrim, and Fallout 4, by a wide margin. They have the best-documented loaders in gaming: Fabric for Minecraft, SKSE for Skyrim, F4SE for Fallout 4. Every beginner passthrough project on the Discord is built on them.
+Minecraft, Skyrim, and Fallout 4, by a wide margin. They have the best-documented loaders in gaming: Fabric for Minecraft, SKSE for Skyrim, F4SE for Fallout 4. Most beginner passthrough projects are built on them. GTA San Andreas and Outer Wilds also have usable loaders, so they aren't out, they're just less common.
 
 **What are the hardest?**
 Games with no mod loader and no source. If the host game has nothing, you're reverse engineering an engine before you can start. See [guide 8](08-mod-loaders-and-script-extenders.md).
+
+**Can I do this on Linux or macOS?**
+Not from the examples. Every project in these guides targets Windows, and hl2-rs says other systems are unverified. You'd be running the Windows build under Wine or Proton and debugging it yourself. See [guide 8](08-mod-loaders-and-script-extenders.md#windows-is-the-common-denominator).
+
+**SkyCraft or universal-modder, which do I use?**
+They do different jobs. SkyCraft is a working passthrough mod you read and adapt; universal-modder is a set of skills that walks an agent through modding any game, including recon and reverse engineering. If you want Minecraft in Skyrim, use SkyCraft. If you're starting from a game nobody has touched, universal-modder may help.
+
+**How do I move a character or asset from one game into the other?**
+The usual answer is an extractor plus a converter, and you write your own code for it. One member has the agent write an asset extractor so players can pull what they need from their own copies. Don't extract assets into your repo. See [guide 6](06-rules-legal-and-publishing.md).
+
+**What about games I can't install from Steam, or console titles?**
+Some projects need a disc-based copy extracted yourself, like Skate 3 for Xbox 360. That works for a game you own. What doesn't work is taking an ISO from a download site. See [guide 8](08-mod-loaders-and-script-extenders.md#disc-based-and-console-games).
+
+**Are there games where this is impossible?**
+Sometimes, for reasons other than loaders. Some games ship under publishing restrictions that limit what a port can use: Microsoft's Halo MCC has position and collision restrictions, while Xbox decomp projects exist under their own terms. Ask your agent to check the specific title's terms before you plan around it.
 
 ## Tools and cost
 
@@ -103,6 +118,9 @@ Give the agent frame-time logs from both processes and ask it to profile before 
 **The mod works but it's janky. Is that normal?**
 Yes, at first. Members describe their projects as "jank as hell but working." Performance and polish come after it functions.
 
+**How long does a passthrough mod take?**
+The only figure anyone here has actually reported is about 3-4 hours of back-and-forth for an Elden Ring + Spider-Man mashup, described as jank but working. Treat that as one data point, not a typical runtime. A rewrite is a completely different scale.
+
 ## Rules and sharing
 
 **Can I mod games with anti-cheat?**
@@ -133,6 +151,8 @@ These came up and nobody has given a confirmed answer. If you know, post it on t
 - Whether detailed prompts or short loose prompts are more efficient (people disagree; see the debate section in [guide 4](04-prompting-and-workflow.md))
 - Making games run better on original hardware (such as PS3), and whether emulator research applies
 - Whether local models can handle a real project on a 12 GB GPU
+- Whether a passthrough mod can be made to work on Linux or macOS at all
+- Which games have publishing terms that block a port outright, beyond the Halo MCC restrictions
 
 ---
 

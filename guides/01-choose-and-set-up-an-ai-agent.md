@@ -26,7 +26,9 @@ Several people confused these. **Claude Code and Codex are agents.** MCP (Model 
 
 ### What the agent is
 
-Almost all of these are a terminal program or a VS Code extension. The agent is software running on your machine with the same file access your user account has: no special permissions, no sandbox, nothing protecting you. That is why the safety section at the bottom of this guide matters.
+Almost all of these are a terminal program or a VS Code extension. The agent runs on your machine with your user account's file access, so what protects you depends on how you've configured it.
+
+Claude Code asks before it acts, shows file edits as diffs for you to approve, and has a built-in sandbox you switch on with `/sandbox`. Codex has its own permission and sandbox settings. Protection drops when people switch to full-access modes, which the Discord thread describes as members do. That is why the safety section at the bottom of this guide matters: the defaults help, and the failure mode is turning them off.
 
 You do not need an IDE, but one experienced member recommends VS Code so you get proper file views and diffs. The agent creates your files and runs your builds either way, so you never copy-paste code into folders by hand.
 

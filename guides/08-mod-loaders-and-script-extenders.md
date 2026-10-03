@@ -10,16 +10,20 @@ A passthrough mod needs one thing: **a way to run your own code inside the host 
 
 | Host game | Engine | Loader / extender | Language | Difficulty |
 |-----------|--------|-------------------|----------|-----------|
-| Skyrim / Skyrim SE / AE | Creation Engine | SKSE ([afkmods.com](https://afkmods.com/), [`ianpatt/skse64`](https://github.com/ianpatt/skse64)) | C++ + Papyrus | Easy |
-| Fallout 4 | Creation Engine | F4SE ([afkmods.com](https://afkmods.com/), [`ianpatt/f4se`](https://github.com/ianpatt/f4se)) | C++ + Papyrus | Easy |
+| Skyrim / Skyrim SE / AE | Creation Engine | SKSE ([skse.silverlock.org](https://skse.silverlock.org/)) | C++ + Papyrus | Easy |
+| Fallout 4 | Creation Engine | F4SE ([f4se.silverlock.org](https://f4se.silverlock.org/)) | C++ + Papyrus | Easy |
 | Starfield | Creation Engine 2 | Same approach as F4SE | C++ | Medium |
 | Minecraft: Java | n/a | Fabric, Forge, or [NeoForge](https://neoforged.net) | Java / Kotlin | Easy |
-| Outer Wilds | Unity | [Outer Wilds Mod Loader](https://outerwildsmods.com/) + Unity mods | C# | Medium |
+| Outer Wilds | Unity | [Outer Wilds Mod Loader](https://outerwildsmods.com/) | C# | Medium |
 | GTA San Andreas / Vice City / GTA III | RenderWare | [plugin-sdk](https://github.com/DK22Pac/plugin-sdk) (ASI / CLEO plugins) | C++ / C | Medium |
 | Most Unity games | Unity | [BepInEx](https://github.com/BepInEx/BepInEx) or [MelonLoader](https://github.com/LavaGang/MelonLoader) | C# | Easy or Medium |
 | Most Unreal games | Unreal | [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) | Lua | Medium |
-| GameMaker 2 / 3 games | GameMaker | [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool) | GML + tool | Easy |
+| GameMaker Studio 1.4 and 2 | GameMaker | [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool) | GML + tool | Medium on Windows only |
 | Ren'Py visual novels | Ren'Py | [Ren'Py SDK](https://www.renpy.org/doc/html/developer_tools.html) | Python | Easy |
+
+The Bethesda script extenders come from `afkmods.com`, and the silverlock.org links above are what SkyCraft and FalloutCraft point people at.
+
+On GameMaker: there is no GameMaker 3. UndertaleModTool covers GameMaker Studio 1.4 and GameMaker Studio 2, bytecode versions 13 through 17. It can't touch YYC-compiled games, and there's no official way to run its GUI on macOS or Linux, so on those platforms you need Wine.
 
 ## What the words mean
 
@@ -45,11 +49,24 @@ The combination "host has a loader + gameplay game has an API" is what makes Sky
 
 ### Creation Engine (Skyrim, Fallout 4)
 
-The best-documented modding family for native-code work, and what SkyCraft, FalloutCraft and OWCraft are built on.
+The best-documented modding family for native-code work, and what SkyCraft and FalloutCraft are built on.
 
 - **SKSE / F4SE** load a plugin DLL and expose a scripting layer (Papyrus) alongside it. Address Library gives plugins access to game functions.
 - Mods usually split into two halves: a native plugin (C++) and a Papyrus script. A passthrough mod needs the native side, because it has to run every frame.
-- Fallout 4 and Skyrim share enough architecture that SkyCraft ports between them with modest changes. That's why FalloutCraft exists as a small fork rather than a from-scratch project.
+- Fallout 4 and Skyrim share enough architecture that SkyCraft's design ports across with modest changes. FalloutCraft did it by keeping SkyCraft's Fabric mod with its own changes and writing a new F4SE plugin, which is why some SkyCraft features were never ported: digging, lighting, water, NPC pathing around blocks, skill training, and multiplayer.
+
+Outer Wilds is Unity, not Creation Engine. OWCraft, the third project in this family, is Unity with the Outer Wilds Mod Loader.
+
+### Windows is the common denominator
+
+Every project referenced in these guides targets Windows: SkyCraft, FalloutCraft, OWCraft, GTA San AnSkateas, hl2-rs, and gang-beasts-rust. hl2-rs says outright that other operating systems are unverified.
+
+On Linux, run the Windows build under Wine or Proton and expect to do your own debugging. There is no finished project here to copy from for getting a passthrough mod working natively on another OS.
+
+### GameMaker
+
+- **UndertaleModTool** reads the game's data files and code as text, edits them, and writes them back. It's the most approachable modding target on this list, and a good one to learn on if you want to see how a game works internally.
+- Limits worth knowing: GameMaker Studio 1.4 and GameMaker Studio 2 only (bytecode 13 to 17), no YYC-compiled games, and no official GUI build for macOS or Linux.
 
 ### Unity
 
@@ -63,10 +80,6 @@ The most common engine in modern indie games, and the easiest to get into.
 
 - **UE4SS** injects a Lua scripting layer, generates a live SDK dump, and gives you a property editor for poking at a running game. The property editor alone makes it good for exploration: you can read the value of anything and find out what a variable does.
 - Games ship in Unreal 4 and Unreal 5 with very different internals. UE4SS support varies by title, so check before you commit.
-
-### GameMaker
-
-- **UndertaleModTool** reads the game's data files and code as text, edits them, and writes them back. This is the easiest modding target on the list, and the best one to learn on if you want to see how a game works internally.
 
 ### Open-source engine reimplementations
 
@@ -96,7 +109,19 @@ The log file is your friend. When something doesn't load, the loader almost alwa
 Loaders and mod APIs are pinned to specific game versions. A loader built for Skyrim 1.5.97 won't load correctly in 1.6.1170. Members have lost whole evenings to this.
 
 - Write your exact game version in your README and in every issue you file.
-- Keep a downgrade tool around if the game is old. GTA San AnSkateas needs GTA San Andreas at **version 1.0**, which is not the current Steam version, so it uses an open-source downgrader ([gtasa-open-downgrader](https://github.com/xxanqw/gtasa-open-downgrader)).
+- Keep a downgrade tool around if the game is old. GTA San AnSkateas needs GTA San Andreas at **version 1.0 US**, which is neither the current Steam release nor the Definitive Edition, so it uses an open-source downgrader ([gtasa-open-downgrader](https://github.com/xxanqw/gtasa-open-downgrader)).
+
+A downgrader is a version-matching tool, not a DRM tool. It exists so a copy you already own reaches the build a mod was written against. See [guide 6](06-rules-legal-and-publishing.md) for where that line sits.
+
+## Disc-based and console games
+
+Some projects need a game you can't install from Steam. GTA San AnSkateas needs Skate 3 for Xbox 360, extracted from your own disc's ISO with a tool like [extract-xiso](https://github.com/XboxDev/extract-xiso), or from a Games on Demand copy with Velocity.
+
+What that means in practice:
+
+- **Extract from your own disc or your own dump.** The ISO is your copy of a game you bought, so it's fair game for personal use.
+- **Never take an ISO from a download site or a torrent.** That's the one thing that puts you on the wrong side of the rules in [guide 6](06-rules-legal-and-publishing.md), and it taints the whole project.
+- **Keep the extracted files outside your repo.** They're game data, so they belong in your gitignored folder like everything else.
 
 ## Checklist before you pick a host game
 

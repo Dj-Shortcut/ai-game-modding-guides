@@ -40,14 +40,27 @@ Reverse engineering is a normal part of this work, and [guide 3](03-rust-rewrite
 - Using decompilers and format documentation to understand file formats
 - Publishing your *findings* as documentation, which is how OpenMW and OpenRCT2 exist
 - Building extractors so other players read their own copies
+- Extracting a game from your own disc or your own dump, so a version-matching tool can reach the build it needs
 
 **Not fine:**
 - Getting around DRM, activation, or copy protection
 - Circumventing anti-cheat
 - Redistributing extracted assets, decompiled source, or game data
+- Downloading an ISO or dump from a file-sharing site
 - Making a tool whose purpose is to bypass access controls
 
+A version downgrader sits on the fine side. It exists so a copy you own reaches the build a mod was written against, and it does nothing to the protection on the disc.
+
 If you're unsure where a line is, ask. Nobody gets in trouble for asking first.
+
+## Online play and anti-cheat
+
+Single-player and offline, always. Two things worth being precise about, because both come up:
+
+- **Rocket League is not a blanket no.** Easy Anti-Cheat is required for online play and mods don't run while it's on. With it off through the official option, offline matches, training, LAN, and replays work with mods. Anything online is still out.
+- **Never publish anything that helps someone bypass anti-cheat.** Not a tool, not a config, not instructions.
+
+See [guide 2](02-passthrough-mods.md) for the Rocket League specifics.
 
 ## Credit and licenses
 
@@ -58,7 +71,7 @@ If you're unsure where a line is, ask. Nobody gets in trouble for asking first.
 - **Say you used AI.** Several example projects have an honest note about it. It helps people judge the project and trust it.
 - **Say what's finished and what isn't.** Test before you claim something works.
 
-If a rights holder asks you to change or remove something, do it. gang-beasts-rust says this in its README, and it's a good habit.
+If a rights holder asks you to change or remove something, do it. gang-beasts-rust says this in its README, and it's the right default whether or not another project bothers to.
 
 ## Publishing on the Discord
 

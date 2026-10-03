@@ -4,9 +4,9 @@ These guides exist because people kept asking the same questions and getting the
 
 Questions, half-written ideas, and "is this even possible?" are all welcome on the Discord. You don't need a finished write-up to start a conversation there.
 
-You do not need to be a professional developer. Several of the most valuable contributions here came from people who were stuck last month and worked it out.
+You do not need to be a professional developer. This repo is young and has no contributors yet, which makes a first one valuable.
 
-## What we want
+## What's wanted
 
 **Experienced developers writing proper technical guides.** This is the biggest gap. `toast` said it directly on the Discord: *pretty daunting, will it be technically thorough for those who would want to learn?* If that question is aimed at you, this repo is the place to answer it.
 
@@ -20,7 +20,7 @@ Specifically useful:
 
 **Workflow write-ups from beginners too.** If you got something working recently and you remember being confused, you are the person who can write it down. See [`templates/workflow-writeup.md`](templates/workflow-writeup.md).
 
-## What we don't want
+## What's not wanted
 
 - **Anything about anti-cheat, DRM, or online play.** Not as a how-to, not as a "how I got around it." This is a hard line, not a preference.
 - **Game assets, ripped or extracted, in any form.** Including in screenshots beyond fair use, and including in issues or pull requests.
@@ -38,7 +38,7 @@ Specifically useful:
 
 ### Style
 
-- Third person or "you". Never first person plural.
+- Third person or "you". Avoid "we".
 - British or American spelling, consistent within a file.
 - Sentence case for headings.
 - Backticks for file names, commands, and log output.
@@ -65,17 +65,14 @@ Match the tone of the existing guides. They're deliberately plain, and they say 
 
 ## Open debates
 
-[Guide 4](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words) has a long section on whether detailed prompts or short loose prompts work better. Members disagree sharply. If you run a controlled comparison, that would be a useful contribution and we want it. Post the results on the Discord or open a pull request.
+[Guide 4](guides/04-prompting-and-workflow.md#the-prompting-debate-as-members-put-it) has a long section on whether detailed prompts or short loose prompts work better. Members disagree sharply. If you run a controlled comparison, that would be a useful contribution and it would be welcome. Post the results on the Discord or open a pull request.
 
 [Guide 8](guides/08-mod-loaders-and-script-extenders.md) is missing plenty. If you know that a game has a good modding setup that isn't listed, add it. Include the loader, its language, and a link.
 
-## Known false positives
+Two more known gaps:
 
-These guides are checked with anti-slop scanners, which occasionally flag things that are correct here:
-
-- **Discord nicknames.** A quoted attribution like `**Iroquois [MLBB]:**` trips the "bracket scaffold" rule. Keep the real nickname rather than rewriting it to satisfy a scanner.
-- **The FAQ's "No." and "Yes." answers.** A yes/no question deserves a yes/no answer. Soften them and the answer gets worse.
-- **"number one" in guide 8**, where it means "the most common problem" rather than a product claim.
+- **Non-Windows.** Every example project is Windows-only. Anyone with a working setup on Linux or macOS would be filling a real hole.
+- **Games with publishing restrictions.** Halo MCC and the Xbox decomp projects have terms that limit what a port can use, and nobody has written that up.
 
 ## Licence
 

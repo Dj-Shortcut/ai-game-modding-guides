@@ -56,7 +56,7 @@ Tools, in the order members mention them:
 |------|------|-------|
 | **Ghidra** | Free, open source | The one people use. Needs a Java runtime, and a processor module for some older consoles |
 | **IDA Pro** | Commercial, expensive | The industry standard. Free tier is limited. Ghidra is the default recommendation |
-| **Binary Ninja** | Commercial, cheaper than IDA | Popular with people who find Ghidra's interface awkward |
+| **Binary Ninja** | Commercial, cheaper than IDA | Worth knowing about, though nobody here has reported using it |
 
 One member asked the agent to decompile a folder "using the correct tools," and it identified the platform and format, installed Ghidra with the right processor module, and ran the process. That's a realistic workflow.
 
@@ -81,6 +81,7 @@ a notes file describing what you learned.
 - **Write down what you learned as documentation**, not as code. That documentation is the shareable part. This is how open-source engine reimplementations like [OpenMW](https://github.com/OpenMW/openmw) and [OpenRCT2](https://github.com/OpenRCT2/OpenRCT2) exist.
 - **Single-player, offline games you own only.** Leave DRM alone. Leave anti-cheat alone. Don't target anything to get around access controls. See [guide 6](06-rules-legal-and-publishing.md).
 - **Don't redistribute the output.** Personal study of a game you own is the scope. Publishing extracted assets or decompiled source is not.
+- **Keep your research local.** hl2-rs does the Ghidra work, keeps the databases and findings off the repo, and ships notes about what it learned instead.
 
 Read [guide 6](06-rules-legal-and-publishing.md) before going down this path. It's not legal advice, but it lists what the community's own tooling refuses to do.
 

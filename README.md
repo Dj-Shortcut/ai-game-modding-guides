@@ -12,9 +12,11 @@ These guides answer the questions people asked on the Discord. If something is m
 [![Discord](https://img.shields.io/badge/Discord-join%20the%20server-5865F2?logo=discord&logoColor=white)](https://discord.gg/ccFpNC26Ts)
 [![Single-player and offline games only](https://img.shields.io/badge/scope-single-player%20%26%20offline%20games%20you%20own-lightgrey.svg)](guides/06-rules-legal-and-publishing.md)
 
-> **Status:** draft. Tools, models, plan limits, and mod loaders change fast. Every external link was checked in October 2026, but verify a detail before you rely on it.
+> **Status:** draft. Tools, models, plan limits, and mod loaders change fast. Verify a detail before you rely on it.
 >
-> **Single-player and offline games you own only.** Nothing here covers anti-cheat, DRM, or online play. See [the rules](guides/06-rules-legal-and-publishing.md).
+> **Single-player and offline games you own only.** Nothing here covers anti-cheat, DRM, or online play. Rocket League works offline with anti-cheat off; see [the rules](guides/06-rules-legal-and-publishing.md).
+>
+> **Windows.** Every example project here targets Windows. hl2-rs says other systems are unverified.
 
 ## Start here
 
@@ -78,6 +80,8 @@ People who have never written code and want to try something anyway. You don't n
 
 You do need to be willing to describe problems clearly and to spend most of your time playtesting and reporting back. That is the job.
 
+You also need Windows. Every project these guides point at is Windows-only, and hl2-rs says other systems are unverified. On Linux, run the Windows build under Wine or Proton and expect to debug it yourself.
+
 ## Get help
 
 Guides can only cover so much. For anything specific to your setup, ask in **#support-help** on the [chasm server](https://discord.gg/ccFpNC26Ts). That's where people post problems, and where the answers get turned into better guides.
@@ -90,7 +94,7 @@ Corrections to the guides themselves are better as a pull request. See [CONTRIBU
 
 Nobody has settled these. If you know the answer, post it on the Discord:
 
-- Does a detailed prompt or a short loose one work better? [Both camps are quoted here.](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words)
+- Does a detailed prompt or a short loose one work better? [Both camps are quoted here.](guides/04-prompting-and-workflow.md#the-prompting-debate-as-members-put-it)
 - Which free model can finish a project?
 - How do you handle Unreal Engine games?
 - Can local models handle a real project on a 12 GB GPU?

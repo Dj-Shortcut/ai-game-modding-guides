@@ -7,9 +7,9 @@ A passthrough mod links two games that run at the same time. One game (the **hos
 Say you want Minecraft inside Skyrim:
 
 1. Skyrim runs normally and draws everything on screen.
-2. Minecraft runs hidden in the background and simulates the player and blocks.
-3. A plugin inside Skyrim and a mod inside Minecraft pass information back and forth (position, input, damage, blocks). SkyCraft does this through shared memory.
-4. Skyrim draws what Minecraft says should be there.
+2. Minecraft runs with its window hidden and simulates the player, blocks, and combat.
+3. A plugin inside Skyrim and a mod inside Minecraft pass information back and forth over shared memory. Minecraft is authoritative for the player; Skyrim provides collision and NPCs.
+4. Skyrim draws what Minecraft says should be there, compositing Minecraft's offscreen render into its own depth buffer.
 
 Because both games run together, **every player needs a copy of both**.
 
@@ -20,11 +20,11 @@ One member described the idea well: two games exchanging state, where neither wo
 | Project | Games | Notes |
 |---------|-------|-------|
 | [SkyCraft](https://github.com/chasmlol/SkyCraft) | Skyrim + Minecraft | A script-extender plugin (C++) plus a Fabric mod (Java) |
-| [FalloutCraft](https://github.com/zeyvu/FalloutCraft) | Fallout 4 + Minecraft | A fork of SkyCraft. Keeps its Minecraft mod, replaces the game-side plugin |
+| [FalloutCraft](https://github.com/zeyvu/FalloutCraft) | Fallout 4 + Minecraft | A port of SkyCraft. Keeps its Fabric mod with FalloutCraft changes, replaces the game-side plugin. Several SkyCraft features aren't ported yet |
 | [OWCraft](https://github.com/Yaekai/OWCraft) | Outer Wilds + Minecraft | Built on SkyCraft with a patch. Includes a design doc and development log |
 | [GTA San AnSkateas](https://github.com/ryglizzy/GTA-San-AnSkateas) | GTA San Andreas + Skate 3 | A variation: a plugin loads a Rust rebuild of Skate 3's engine instead of running the whole second game |
 
-Most of these are built on SkyCraft's design, so SkyCraft is the usual starting reference.
+Most of these are built on SkyCraft's design, so SkyCraft is the usual starting reference. Read its `docs/DESIGN.md` before you prompt anything. It tells you which game is authoritative for what, and getting that backwards is expensive to undo.
 
 > A full step-by-step walkthrough of building one of these is in [guide 9](09-worked-example-passthrough-mod.md).
 
@@ -91,9 +91,9 @@ Steps 1 and 2 are the whole trick. Once one value crosses between the games, the
 ## What to expect
 
 - **It starts rough.** Several early projects describe themselves as experimental. Back up your saves.
-- **Versions matter.** Mods are tied to game versions. Write down which versions you tested. GTA San AnSkateas needs GTA San Andreas at version 1.0, not the current Steam version.
-- **Performance needs tuning.** You're running two games and a message channel at once. OWCraft's notes mention a large frame-rate gain from skipping a hidden window's presentation. Give the agent frame-time logs and it can find things like that.
-- **Multiplayer isn't coming.** FalloutCraft lists multiplayer as not ported, and it won't be. These are single-player projects.
+- **Versions matter.** Mods are tied to game versions. Write down which versions you tested. GTA San AnSkateas needs GTA San Andreas at version 1.0 US, not the current Steam release or the Definitive Edition.
+- **Performance needs tuning.** You're running two games and a message channel at once. OWCraft's notes say skipping the presentation of the hidden window took Minecraft from 25 to 60 fps. Give the agent frame-time logs and it can find things like that.
+- **Multiplayer is limited, and mostly not coming.** SkyCraft ships Minecraft-side multiplayer, where guests who also run SkyCraft join your Minecraft world over LAN while each keeps their own Skyrim. FalloutCraft lists multiplayer as not ported yet. Don't plan on it beyond that.
 
 ## Ideas that don't work, and why
 
@@ -101,12 +101,19 @@ These come up on the Discord constantly:
 
 | Idea | Why not |
 |------|---------|
-| GTA x Rocket League | Rocket League is an online game with anti-cheat |
-| Anything with a Rocket League car or asset in it | Same |
-| Any online or multiplayer game | Out of scope entirely. See [guide 6](06-rules-legal-and-publishing.md) |
+| Any online or multiplayer game as the gameplay side | Out of scope entirely. See [guide 6](06-rules-legal-and-publishing.md) |
+| Rocket League in online matches | Easy Anti-Cheat is required for online play, and mods don't run while it's enabled |
 | A host game with no mod loader and no source | You'd be reverse engineering the whole engine first |
 
-Being told no here saves you a weekend. [Guide 8](08-mod-loaders-and-script-extenders.md) lists which games have the loaders you need.
+### Rocket League specifically
+
+Rocket League comes up more than any other game, so the short version: offline is fine.
+
+Easy Anti-Cheat is required for online play on PC, and mods don't run while it's on. Turn it off through the official option and Psyonix's support page says you can run mods during offline matches, training, LAN matches, and replays. That's a legitimate project.
+
+Never try to bypass EAC, and don't publish anything that helps people run mods in online matches.
+
+Being told no on the rest saves you a weekend. [Guide 8](08-mod-loaders-and-script-extenders.md) lists which games have the loaders you need.
 
 ---
 

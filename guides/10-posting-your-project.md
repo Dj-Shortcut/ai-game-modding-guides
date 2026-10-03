@@ -2,12 +2,9 @@
 
 You've got something that runs. Now you want people to find it, and you don't want your project taken down over a rule you didn't know about.
 
-<!-- COMMUNITY: channel and forum names are approximate. Confirm them against the
-     Discord before publishing, and keep the invite link in README.md only. -->
-
 ## What to post, and where
 
-Post to the **share forum** on the Discord so the right people see it. The forum is for finished projects, and good posts there get pinned.
+Post to the **share forum** on the Discord so the right people see it. Rough work-in-progress posts are welcome there, not just finished ones.
 
 Put your project on **GitHub** and link the repo if you want other people to be able to use it. A repo is strongly recommended. A direct download link isn't.
 
@@ -108,7 +105,7 @@ New projects with no stars and no commits get ignored. These things help:
 - **A commit history.** Twenty small commits reads as "someone who works carefully." One giant commit reads as "paste."
 - **A MODLOG.md.** Shows you test what you claim. Members notice this.
 - **An honest "what doesn't work" section.** This builds more trust than a list of features, and it saves you the support questions.
-- **Tell people to back up their saves.** Every serious project in this space does.
+- **Tell people to back up their saves.** The early projects in this space all say it, and they're right.
 
 ## The forum post
 
@@ -154,7 +151,7 @@ If your game has both an online and an offline mode, target the offline mode.
 
 ## If a rights holder contacts you
 
-Remove it. Every serious project in this space says so in its README, and it's the right call. Credit and links to the original work help, but they aren't a licence to keep shipping someone's assets.
+Remove it. That's the right call whether or not another project bothers to say so in its README, and gang-beasts-rust does. Credit and links to the original work help, but they aren't a licence to keep shipping someone's assets.
 
 ## The post-checklist
 

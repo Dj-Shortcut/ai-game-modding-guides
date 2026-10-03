@@ -2,7 +2,7 @@
 
 Copy this to the root of your project as `AGENTS.md` and fill in the bracketed parts. The agent reads this every session, so anything you put here becomes a rule it follows without being reminded.
 
-Every serious project in this space keeps one. It's the cheapest way to keep a long-running project on track.
+Several of the finished projects in this space keep one. It's the cheapest way to keep a long-running project on track.
 
 ---
 

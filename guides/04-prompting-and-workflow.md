@@ -12,6 +12,8 @@ They disagree about how much detail belongs in the first message. Both sides are
 
 **Detailed with context.** Others argue that more context produces a better result, and that good prompting saves time and usage. They care about efficiency, especially on plans with usage limits. Nobody has settled this, and it would make a good thing to test and write up.
 
+One point from this side is worth taking seriously because it undercuts the "write a better first prompt" instinct: a prompt is a tiny fraction of a chat's context. What you say in turn one barely matters by turn fifty. That argues for fixing the chat, not rewriting the prompt.
+
 ### What both sides agree on
 
 - **Be specific about the problem, not the implementation.** "This looks bad, fix it" gives the agent nothing. "The door doesn't open when I press E next to it, and the log says X" does.
@@ -64,35 +66,43 @@ See [guide 5](05-testing-and-troubleshooting.md). The short version: the agent i
 
 ---
 
-## The prompting debate, in members' own words
+## The prompting debate, as members put it
 
 **This section is open. It's meant to be argued with.**
 
 A long thread on this got heated on the Discord. Rather than pretend we settled it, here are the quotes. Read both, try both, and post your results on the Discord.
 
-> **chazm:** "guys theres no tricks or special prompts, you literally just tell the ai to do stuff and itll do it. Thats all i do"
+> **One member:** "guys theres no tricks or special prompts, you literally just tell the ai to do stuff and itll do it. Thats all i do"
 >
 > "if you write some big detailed prompt exactly how you want it, then its gonna be worse than letting the ai wing it. The ai knows the best and most efficient path to the outcome you want."
 >
 > "the more specific the worse by far my man"
+>
+> "I dont get what you mean man, better prompting method? How would that work? You realise the prompt is like 0.1% of the context of a chat"
 
-> **chazm**, later, citing Andrej Karpathy: *"One pattern I find useful for working with LLMs is a nice long ramble session. Sometimes the LLM needs more bits to understand what you're trying to achieve, but you're too lazy to type them."* ([source](https://x.com/karpathy/status/2079610838143623371))
+> **The same member**, later, citing Andrej Karpathy: *"One pattern I find useful for working with LLMs is a nice long ramble session. Sometimes the LLM needs more bits to understand what you're trying to achieve, but you're too lazy to type them."* ([source](https://x.com/karpathy/status/2079610838143623371))
 
-> **Paragon-7:** "These are literally inference machines they require context. The more context you provide the better."
+> **Another member:** "These are literally inference machines they require context. The more context you provide the better."
 >
 > "The more specific and accurate your prompt is, the better the weights will be set. The faster and more efficient the model is at doing the asked task."
->
-> "The prompt is like 0.1% of the context of a chat."
 
-> **Iroquois [MLBB]:** "AI tunnel visions on implementations a lot."
+> **Another:** "AI tunnel visions on implementations a lot."
 >
 > "In this context I agree, in a context of a professional its the opposite."
 
-> **laundry:** "ive found more specific prompts can cause tunnel vision on the wrong things, well in some cases."
+> **Another:** "ive found more specific prompts can cause tunnel vision on the wrong things, well in some cases."
 >
 > "my current prompt running right now is 'there's currently still some stuff missing right? ok lets add it'"
 
-> **toast:** "i'd start asking it inside your ide to create a documentation standard. tell it that youre concerned with token efficiency, but you don't want to sacrifice functionality."
+> **Another:** "i'd start asking it inside your ide to create a documentation standard. tell it that youre concerned with token efficiency, but you don't want to sacrifice functionality."
+
+### A note on these quotes
+
+Names are removed on purpose. These are real people's Discord messages, and quoting them publicly without asking isn't worth the convenience.
+
+They also aren't verbatim: Discord's own capitalisation has been tidied up in a couple of places. The wording is otherwise unchanged, but don't treat them as transcripts.
+
+The Karpathy quote is quoted at second hand. The member pasted it into chat and the link matches the text they pasted, but nobody here has read the original.
 
 ### What the disagreement is actually about
 
@@ -100,7 +110,7 @@ Read side by side, those quotes contain two separate arguments:
 
 **1. Does over-specifying pick the wrong approach?** The short-and-loose side says yes. Dictate the implementation and the agent commits to it, because models tunnel-vision on the first idea they form. The context side says to describe the *goal* precisely and let the agent choose the route. Precision about the outcome isn't the same as dictating the method.
 
-**2. Does it save time?** The context side's strongest argument is usage limits. If a vague prompt makes the agent wander and you burn your 5-hour window on dead ends, "efficient" wins, even if the vague prompt would have got there eventually. One member pointed out that a prompt is a tiny fraction of a chat's context, so prompt length itself may be the wrong thing to optimise.
+**2. Does it save time?** The context side's strongest argument is usage limits. If a vague prompt makes the agent wander and you burn your 5-hour window on dead ends, "efficient" wins, even if the vague prompt would have got there eventually. The 0.1% point cuts against the whole debate: prompt length is probably not the thing worth optimising.
 
 ### Our honest read
 
