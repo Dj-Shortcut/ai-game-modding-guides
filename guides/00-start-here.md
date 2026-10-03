@@ -59,3 +59,7 @@ These three pages answer most of the questions people arrive with, so read them 
 - [ ] I created a folder just for this project
 - [ ] I know I'll playtest myself
 - [ ] I've read the rules in [guide 6](06-rules-legal-and-publishing.md)
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/00-start-here.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/00-start-here.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

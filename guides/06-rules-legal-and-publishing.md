@@ -91,3 +91,7 @@ The share forum has rules. In short:
 ## If you already pushed something you shouldn't have
 
 Git history is public the moment you push. Full recovery steps are in [guide 10](10-posting-your-project.md#if-you-already-committed-game-files). Assume anything pushed was copied — a history rewrite alone doesn't remove it from anyone who already cloned.
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/06-rules-legal-and-publishing.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/06-rules-legal-and-publishing.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

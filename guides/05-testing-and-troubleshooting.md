@@ -73,3 +73,7 @@ Whatever forum or channel you're in, include:
 - the error message or logs
 
 A `STATUS.md` written by the handoff trick in [`templates/STATUS-handoff.md`](../templates/STATUS-handoff.md) already contains most of that. It's the fastest way to get a useful answer, and it works in a Discord thread or a GitHub issue just as well as it does in a fresh chat.
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/05-testing-and-troubleshooting.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/05-testing-and-troubleshooting.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

@@ -125,7 +125,7 @@ A screenshot or GIF, a real commit history, an honest "what doesn't work" sectio
 
 ## Still unanswered
 
-These came up and nobody has given a confirmed answer. If you know, please add it.
+These came up and nobody has given a confirmed answer. If you know, please add it — [Discussions](https://github.com/trevaintdead/ai-game-modding-guides/discussions) is open, and so are issues and pull requests.
 
 - Which free model works best with OpenCode?
 - Whether free plans can complete a real project
@@ -133,3 +133,7 @@ These came up and nobody has given a confirmed answer. If you know, please add i
 - Whether detailed prompts or short loose prompts are more efficient (people disagree — see the debate section in [guide 4](04-prompting-and-workflow.md))
 - Making games run better on original hardware (such as PS3), and whether emulator research applies
 - Whether local models can handle a real project on a 12 GB GPU
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/07-faq.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/07-faq.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

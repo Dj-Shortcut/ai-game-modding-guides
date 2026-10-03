@@ -68,3 +68,7 @@ Agents can read and delete files, and many members run them with broad access. T
 - **VS Code** (or another editor) with your agent's extension. One experienced member recommends this so you get proper versioning and file views. It's not required.
 - **Git and a GitHub account.** You'll need these to share your project.
 - **[universal-modder](https://github.com/rehan-remade/universal-modder):** a toolkit of skills that walks an agent through modding a game: recon, reverse engineering, testing, and publishing. It works with Claude Code, Codex, Cursor, Gemini CLI, Copilot, and OpenCode. Its install steps are in its README. Its optional art tools need a separate API key. It limits itself to single-player or offline games you own, and it won't touch anti-cheat.
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/01-choose-and-set-up-an-ai-agent.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/01-choose-and-set-up-an-ai-agent.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

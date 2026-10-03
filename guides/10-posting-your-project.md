@@ -170,3 +170,7 @@ Remove it. Every serious project in this space says so in its README, and it's t
 - [ ] Mentioned AI use
 - [ ] Told people to back up saves
 - [ ] Ready to answer questions in the thread
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/10-posting-your-project.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/10-posting-your-project.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

@@ -68,7 +68,7 @@ See [guide 5](05-testing-and-troubleshooting.md). The short version: the agent i
 
 **This section is open. It's meant to be argued with.**
 
-There was a long thread on this in the server and it got heated. Rather than pretend we settled it, here is what was actually said. Read both, try both, and post your results as an issue on this repo or in the tech-support forum.
+There was a long thread on this in the server and it got heated. Rather than pretend we settled it, here is what was actually said. Read both, try both, and post your results in [Discussions](https://github.com/trevaintdead/ai-game-modding-guides/discussions) or in the tech-support forum.
 
 > **chazm** — "guys theres no tricks or special prompts, you literally just tell the ai to do stuff and itll do it. Thats all i do"
 >
@@ -120,7 +120,7 @@ If you run a controlled comparison, this is genuinely wanted here. Log the same 
 - how much of your usage limit it consumed
 - what it got wrong
 
-Post it as an issue on this repo and we'll fold the best ones into this page.
+Post it in [Discussions](https://github.com/trevaintdead/ai-game-modding-guides/discussions) and we'll fold the best ones into this page.
 
 ### A few things that came up in the thread
 
@@ -130,3 +130,7 @@ Post it as an issue on this repo and we'll fold the best ones into this page.
 - **Explain your constraints, not your implementation.** "It needs to work on a 2015 laptop" is context. "Use a thread pool" is an instruction.
 
 ---
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/04-prompting-and-workflow.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/04-prompting-and-workflow.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

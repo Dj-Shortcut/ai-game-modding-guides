@@ -1,4 +1,4 @@
-# Game Fusion Guides
+# AI Game Modding Guides
 
 Beginner guides for two kinds of project, both built with an AI coding agent:
 
@@ -7,7 +7,14 @@ Beginner guides for two kinds of project, both built with an AI coding agent:
 
 These guides are written from the questions people actually asked. If something is missing or wrong, [open an issue](CONTRIBUTING.md) or send a pull request.
 
+[![Licence: MIT](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE)
+[![Contributing welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Discussions open](https://img.shields.io/badge/discussions-open%20%E2%9C%93-blueviolet.svg)](https://github.com/trevaintdead/ai-game-modding-guides/discussions)
+[![Single-player and offline games only](https://img.shields.io/badge/scope-single-player%20%26%20offline%20games%20you%20own-lightgrey.svg)](guides/06-rules-legal-and-publishing.md)
+
 > **Status:** draft. Tools, models, plan limits, and mod loaders change fast. Every external link was checked in October 2026, but verify a detail before you rely on it.
+>
+> **Single-player and offline games you own only.** Nothing here covers anti-cheat, DRM, or online play. See [the rules](guides/06-rules-legal-and-publishing.md).
 
 ## Start here
 
@@ -71,9 +78,20 @@ People who have never written code and want to try something anyway. You don't n
 
 You do need to be willing to describe problems clearly and to spend most of your time playtesting and reporting back. That's the actual job.
 
+## Open questions
+
+Some things in here genuinely aren't settled. If you know the answer, the repo has [Discussions enabled](https://github.com/trevaintdead/ai-game-modding-guides/discussions):
+
+- Does a detailed prompt or a short loose one work better? [Both camps are quoted here.](guides/04-prompting-and-workflow.md#the-prompting-debate-in-members-own-words)
+- Which free model can actually finish a project?
+- How do you handle Unreal Engine games?
+- Can local models handle a real project on a 12 GB GPU?
+
 ## Contributing
 
-Experienced developers are very welcome — a lot of what people complain about is missing. Technical write-ups, corrections, dead ends worth documenting, and workflow examples all help. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Experienced developers are very welcome — a lot of what people complain about is missing. Technical write-ups, corrections, dead ends worth documenting, and workflow examples all help.
+
+To fix a typo or a broken link, [edit the page on GitHub](CONTRIBUTING.md#how-to-contribute) — you don't need to clone anything.
 
 ## Disclaimer
 
@@ -81,6 +99,8 @@ These are unofficial fan projects. They are not affiliated with or endorsed by a
 
 Everything described here is for single-player and offline games that you own. Nothing in these guides covers anti-cheat, DRM, or online play.
 
-## Licence
+## Licence and attribution
 
 Guides: [MIT](LICENSE). Linked projects keep their own licences — check each one before reusing its code.
+
+If you write a guide based on one of these, credit it by name and keep its licence. FalloutCraft and OWCraft both credit SkyCraft that way, and it's the standard worth holding to.

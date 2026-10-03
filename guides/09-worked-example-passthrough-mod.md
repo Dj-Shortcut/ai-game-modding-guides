@@ -186,3 +186,7 @@ See [guide 10](10-posting-your-project.md) for posting it, and [guide 6](06-rule
 - [ ] Features added one at a time, each tested and committed
 - [ ] README says what works and what doesn't
 - [ ] No game files in the repo
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/09-worked-example-passthrough-mod.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/09-worked-example-passthrough-mod.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

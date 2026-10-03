@@ -112,3 +112,7 @@ First, look for existing documentation, file format specs, and decomp projects f
 | Needs | Both games running together | Only your game files |
 | Size | Often smaller | Often much bigger |
 | Good first project? | Usually | Only with a small goal |
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/03-rust-rewrites-and-ports.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/03-rust-rewrites-and-ports.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

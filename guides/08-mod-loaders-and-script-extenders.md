@@ -108,3 +108,7 @@ Loaders and mod APIs are pinned to specific game versions. A loader built for Sk
 - [ ] I've found at least one existing mod for this game, so I can read real code
 
 If you can't tick all six, go and look at a different game. That is not giving up, it is the fastest way to get something on screen.
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/08-mod-loaders-and-script-extenders.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/08-mod-loaders-and-script-extenders.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>

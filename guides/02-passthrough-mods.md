@@ -107,3 +107,7 @@ Coming up in the server constantly:
 | A host game with no mod loader and no source | You'd be reverse engineering the whole engine first |
 
 Being told no here saves you a weekend. [Guide 8](08-mod-loaders-and-script-extenders.md) will tell you which games have the loaders you need.
+
+---
+
+<sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/02-passthrough-mods.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/02-passthrough-mods.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>
