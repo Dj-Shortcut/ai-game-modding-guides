@@ -27,9 +27,6 @@ You tell the agent where the games are installed and it finds what it needs. Mem
 **How do I know if my idea is possible?**
 Check whether the host game has a mod loader or script extender. That's the main thing. See [guide 8](08-mod-loaders-and-script-extenders.md).
 
-**I want to use a game with Easy Anti-Cheat. Can I?**
-For offline play, yes. Easy Anti-Cheat is required for online play on PC and mods don't run while it's enabled. Turn it off through the official option and you can run mods in offline matches, training, LAN matches, and replays. Online matches with mods are out. Never try to bypass EAC. See [guide 2](02-passthrough-mods.md).
-
 **Can I merge game X with game Y?**
 Maybe. It depends mostly on whether the host game can run your code (script extender, mod loader, plugin system) and whether it's single-player. Members have reported projects like Elden Ring and Spider-Man mechanics and an Octane-style car in Minecraft, but nothing is guaranteed. Search for existing projects and tools for your games first.
 
