@@ -16,7 +16,7 @@ Worth saying up front: everyone has their own methods, prompting style, and work
 
 > **Status:** draft. Tools, models, plan limits, and mod loaders change fast. Verify a detail before you rely on it.
 >
-> **Single-player and offline games you own only.** Nothing here covers anti-cheat, DRM, or online play. Rocket League works offline with anti-cheat off; see [the rules](guides/06-rules-legal-and-publishing.md).
+> **Single-player and offline games you own only.** Nothing here covers anti-cheat, DRM, or online play. See [the rules](guides/06-rules-legal-and-publishing.md).
 >
 > **Windows.** Every example project here targets Windows. hl2-rs says other systems are unverified.
 
