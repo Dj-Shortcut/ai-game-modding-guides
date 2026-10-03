@@ -22,20 +22,22 @@ Newest entries go at the top.
 ```markdown
 ## 2026-10-03 Player position sync
 
-**Changed:** Added position messages from the host plugin to the second game (`plugin/link.cpp`, `mod/LinkReader.java`)
+**Changed:** Added position messages from the gameplay game to the host plugin (`mod/LinkReader.java`, `plugin/link.cpp`)
 **Why:** Step 2 of the plan: send one piece of data between the games
-**Tested how:** Started both games, walked around in the host game, watched the position log lines in the other
+**Tested how:** Started both games, walked around, compared the position each side logged
 **Result:** Positions match within about one frame at normal walking speed
 **Still broken / not tested:** Fast travel and loading screens not tested; no rotation yet
-**Next:** Send input back the other way
+**Next:** Send collision shapes the other way
 ```
+
+That example sends position from the gameplay game to the host. SkyCraft works the same way, where Minecraft is authoritative for the player and the host supplies collision. Decide which side owns the player in step one, then stay consistent.
 
 ## Tips
 
 - "Tested" means you or the agent actually ran it. If it wasn't run, write "not tested."
 - Link to the log file or paste the key lines.
 - Keep it short. A line or two per field is plenty.
-- **Log the failures too.** "Tried file-based transport, Windows locks the file, switching to shared memory" is the most useful kind of entry, because it's the one that stops someone else repeating it.
+- **Log the failures too.** "Tried file-based transport, Windows locks the file, switched to shared memory" is the most useful kind of entry, because it's the one that stops someone else repeating it.
 - Ask the agent to add the entry itself: `Add a MODLOG entry for what you just did.`
 
 ## Why bother
@@ -44,5 +46,7 @@ Newest entries go at the top.
 - **For a fresh chat:** it beats handing over the whole chat. See [`STATUS-handoff.md`](STATUS-handoff.md).
 - **For readers:** it's the closest thing to proof that the project is real and tested. Members notice this, and it's what separates a serious project from a vibe-coded one.
 - **For you later:** when you come back in six months, you'll want to know why you made a decision.
+
+OWCraft keeps one and links it from its README. Keeping yours visible is the whole point.
 
 Keep it in your repo. It's cheap and it compounds.

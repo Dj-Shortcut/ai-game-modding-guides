@@ -31,6 +31,10 @@ and be honest about what we've verified versus what we only assume.
 ## What doesn't work yet
 - [...]
 
+## Which game owns the player
+[Which side is authoritative for player position, if this is a passthrough mod.
+Write "not applicable" for a rewrite.]
+
 ## The current problem
 [Exactly what's going wrong: what we did, what we expected, what happened]
 

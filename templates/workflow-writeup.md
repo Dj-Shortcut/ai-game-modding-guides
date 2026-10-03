@@ -36,6 +36,7 @@ thing you'd tell someone starting this.]
 - **Built with:** [agent and model]
 - **Time:** [hours, roughly]
 - **Cost:** [plan tier, roughly]
+- **OS:** [Windows, because that's what it needed]
 
 [Screenshot or GIF]
 
@@ -65,14 +66,23 @@ The research I did that saved me time. Be specific enough to act on.
 you aimed at. This is the part people can copy.]
 
 1. [Milestone 1: e.g. "plugin loads and writes a log line"]
-2. [Milestone 2: e.g. "position crosses from A to B"]
+2. [Milestone 2: e.g. "position crosses from B to A"]
 3. [Milestone 3: e.g. "B's objects spawn in A's world"]
 4. ...
+
+## Which game owns the player
+
+[Say which side is authoritative for player position and physics, and why. This
+is the decision everyone gets wrong, and reversing it later means rewriting
+both halves. SkyCraft made Minecraft authoritative for the player even though
+Skycraft is the game you're looking at.]
 
 ## Transport and architecture
 
 [How the two halves talk. Shared memory, socket, file, IPC? What messages go
-across and at what rate? Keep this concrete; it's the part people copy.]
+across and at what rate? Keep this concrete; it's the part people copy. If the
+gameplay game still renders offscreen, say so here rather than claiming it runs
+headless.]
 
 ## What I prompted, roughly
 
@@ -135,5 +145,12 @@ coding agents.
 
 - Game assets, screenshots of copyrighted content beyond fair use, or decompiled code
 - Long transcripts of the whole session. Excerpts.
-- Advertising. Post it here and it gets removed.
+- Advertising. Post it there and it gets removed.
 - Anything from a game you're not allowed to mod. See [guide 6](../guides/06-rules-legal-and-publishing.md).
+- ISOs or dumps you didn't make yourself, even if you own the game on disc
+
+## A note on unfinished work
+
+The share forum takes work-in-progress posts, not just finished ones. A half-working project with an honest "what doesn't work" section is more useful than nothing, and it's how people find collaborators. Say what you've got and what's broken.
+
+Only post if you made it. No assets, no leaked material, and a repo link rather than a direct download.

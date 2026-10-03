@@ -47,6 +47,8 @@ The combination "host has a loader + gameplay game has an API" is what makes Sky
 
 ## Engine families, in more detail
 
+The table above lists loaders by host game. These sections explain what each engine family gives you.
+
 ### Creation Engine (Skyrim, Fallout 4)
 
 The best-documented modding family for native-code work, and what SkyCraft and FalloutCraft are built on.
@@ -63,11 +65,6 @@ Every project referenced in these guides targets Windows: SkyCraft, FalloutCraft
 
 On Linux, run the Windows build under Wine or Proton and expect to do your own debugging. There is no finished project here to copy from for getting a passthrough mod working natively on another OS.
 
-### GameMaker
-
-- **UndertaleModTool** reads the game's data files and code as text, edits them, and writes them back. It's the most approachable modding target on this list, and a good one to learn on if you want to see how a game works internally.
-- Limits worth knowing: GameMaker Studio 1.4 and GameMaker Studio 2 only (bytecode 13 to 17), no YYC-compiled games, and no official GUI build for macOS or Linux.
-
 ### Unity
 
 The most common engine in modern indie games, and the easiest to get into.
@@ -75,6 +72,11 @@ The most common engine in modern indie games, and the easiest to get into.
 - **BepInEx** patches the game at load and loads your C# assemblies. Works with both Mono and IL2CPP builds.
 - **MelonLoader** does the same job with a different API and better support for more title variants. Pick one; don't install both.
 - If the game is IL2CPP, expect an extra step where the original method bodies are stubs. Tools like Il2CppDumper recover the metadata so the loader can build real hooks. Your agent can handle this if you point it at the game directory.
+
+### GameMaker
+
+- **UndertaleModTool** reads the game's data files and code as text, edits them, and writes them back. It's the most approachable modding target on this list, and a good one to learn on if you want to see how a game works internally.
+- Limits worth knowing: GameMaker Studio 1.4 and GameMaker Studio 2 only (bytecode 13 to 17), no YYC-compiled games, and no official GUI build for macOS or Linux.
 
 ### Unreal Engine
 

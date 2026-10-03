@@ -33,9 +33,9 @@ Asking for the whole game at once usually goes badly. These habits help:
 
 Agents forget between sessions. Files don't. Keep three small documents in your project:
 
-1. **A rules file** (`AGENTS.md` or `CLAUDE.md`): what the agent must always do or never do. Example projects keep one. See [`templates/AGENTS-starter.md`](../templates/AGENTS-starter.md).
-2. **A development log** (`MODLOG.md`): what changed, how it was tested, what's still broken. See [`templates/MODLOG-template.md`](../templates/MODLOG-template.md).
-3. **A design doc** (`docs/DESIGN.md`): how the project works, in plain language.
+1. **A rules file** (`AGENTS.md` or `CLAUDE.md`): what the agent must always do or never do. hl2-rs keeps one. See [`templates/AGENTS-starter.md`](../templates/AGENTS-starter.md).
+2. **A development log** (`MODLOG.md`): what changed, how it was tested, what's still broken. OWCraft keeps one and links it from its README. See [`templates/MODLOG-template.md`](../templates/MODLOG-template.md).
+3. **A design doc** (`docs/DESIGN.md`): how the project works, in plain language. SkyCraft's is the best example of this in the whole space.
 
 Ask the agent to update them as it goes.
 

@@ -103,7 +103,7 @@ New projects with no stars and no commits get ignored. These things help:
 
 - **A screenshot or a GIF.** Usually the difference between a click and a scroll. Notepad-draw something if you have to.
 - **A commit history.** Twenty small commits reads as "someone who works carefully." One giant commit reads as "paste."
-- **A MODLOG.md.** Shows you test what you claim. Members notice this.
+- **A MODLOG.md.** Shows you test what you claim. OWCraft keeps one and links it from its README, which is the cheapest possible signal that you actually test.
 - **An honest "what doesn't work" section.** This builds more trust than a list of features, and it saves you the support questions.
 - **Tell people to back up their saves.** The early projects in this space all say it, and they're right.
 
