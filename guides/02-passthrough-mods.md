@@ -104,16 +104,6 @@ These come up on the Discord constantly:
 | Any online or multiplayer game as the gameplay side | Out of scope entirely. See [guide 6](06-rules-legal-and-publishing.md) |
 | A host game with no mod loader and no source | You'd be reverse engineering the whole engine first |
 
-### Rocket League specifically
-
-Rocket League comes up more than any other game, so the short version: offline is fine.
-
-Easy Anti-Cheat is required for online play on PC, and mods don't run while it's on. Turn it off through the official option and Psyonix's support page says you can run mods during offline matches, training, LAN matches, and replays. That's a legitimate project.
-
-Never try to bypass EAC, and don't publish anything that helps people run mods in online matches.
-
-Being told no on the rest saves you a weekend. [Guide 8](08-mod-loaders-and-script-extenders.md) lists which games have the loaders you need.
-
 ---
 
 <sub>[Spot a mistake? [Edit this page on GitHub](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/02-passthrough-mods.md).](https://github.com/trevaintdead/ai-game-modding-guides/edit/main/guides/02-passthrough-mods.md) &middot; [Open an issue](https://github.com/trevaintdead/ai-game-modding-guides/issues/new) &middot; Part of [AI Game Modding Guides](https://github.com/trevaintdead/ai-game-modding-guides)</sub>
