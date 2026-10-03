@@ -1,0 +1,31 @@
+# Repo's own files — these are never game content
+README.md
+CONTRIBUTING.md
+LICENSE
+
+# Guides and templates
+guides/**
+templates/**
+
+# Never commit game data.
+# This is a whitelist on purpose: it ignores everything, then includes only
+# source. An extracted asset cannot be committed by accident.
+#
+
+# Ignore everything by default
+/*
+
+# ...then include these
+!README.md
+!CONTRIBUTING.md
+!LICENSE
+!.gitignore
+!guides/
+!templates/
+!guides/*.md
+!templates/*.md
+
+# If you keep screenshots or docs assets, add them explicitly, e.g.:
+# !docs/
+# !docs/*.png
+# !docs/*.gif
