@@ -34,14 +34,7 @@ Game B (gameplay) needs:
 | Idea | Why not |
 |------|---------|
 | Any online or multiplayer game as Game B | Out of scope. See [guide 6](06-rules-legal-and-publishing.md). |
-| Rocket League online play | Easy Anti-Cheat is required for online play, and mods don't run while it's on. Offline with EAC off is fine. See below. |
 | A game with no loader and no source | You'd be reverse engineering the whole thing first. That's the "rewrite" path, not passthrough. |
-
-### Rocket League specifically
-
-Rocket League gets asked about constantly, so here's the accurate position. Easy Anti-Cheat is required for online play on PC. When EAC is on, mods don't run. When you turn it off, Psyonix's own support page says you can run mods during offline matches, training, LAN matches, and replays.
-
-So an offline Rocket League project is fine. Turn EAC off through the official option, never try to bypass it, and don't publish anything that helps people run mods in online matches.
 
 ## Step 1: Install and verify
 
