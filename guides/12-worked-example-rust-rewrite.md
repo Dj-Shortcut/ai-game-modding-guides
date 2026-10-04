@@ -1,104 +1,85 @@
 # 12. Worked example: an AI-assisted Rust rewrite
 
-This is a case study from [mw2-rust-rust-rewrite](https://github.com/Dj-Shortcut/mw2-rust-rust-rewrite), an unfinished standalone Rust/Bevy prototype. It is included because the project shows both useful progress and the limits of AI-assisted rewrites. It is not a finished game and it does not contain the original game's files.
+This case study is based on [mw2-rust-rust-rewrite](https://github.com/Dj-Shortcut/mw2-rust-rust-rewrite), an unfinished standalone Rust/Bevy project. It is not a finished game and it does not contain the original game's assets.
 
-## TL;DR
+## What this project actually is
 
-- The project is a standalone Rust/Bevy game prototype, not a copy of a commercial game's assets or source.
-- The useful first target was a small vertical slice: start a session, move, shoot, survive, save/load, and build a little world.
-- An AI agent was most useful when the work was split into small issues with explicit acceptance checks.
-- Headless checks, a compiler pass, and a real window prove different things. None of them alone proves that the game is finished.
-- The biggest lesson: keep a written boundary between code present, headless-verified, graphically verified, and release-ready.
+The intended end product is an original game with its own authored models, materials, sounds and world content. The current development tree is also built on inherited public code:
 
-## The result
-
-- **Project:** [mw2-rust-rust-rewrite](https://github.com/Dj-Shortcut/mw2-rust-rust-rewrite)
-- **Stack:** Rust and Bevy
-- **Content:** original authored models, materials, and audio; no original game files
-- **Status:** unfinished development source, not a release build
-- **Platform focus:** standalone PC prototype
-
-The project has its own survival/building systems, FPS-style combat, and skating systems. It is inspired by several games, but it is not affiliated with their publishers.
-
-## What works in the recorded development state
-
-The repository records successful checks for parts of the following systems:
-
-- a session that starts, moves, shoots, kills an NPC, dies, and respawns;
-- inventory, crafting, consumables, ammunition, and save/load;
-- a small authored world with building placement, collision, undo/redo, and scene save/load;
-- skating, pushing, ollies, landings, and early rail/ledge grinding;
-- native keyboard/mouse flows for several inventory, building, fishing, cooking, and lootbag routes;
-- generated authored models and short CC0 audio cues.
-
-These are feature-level results, not a claim that the whole product is finished. Hardware controllers, complete audio playback, all object variants, multiplayer, packaging, and the complete player flow remain separate work.
-
-## What did not work as a completion test
-
-Several checks were useful but easy to overread:
-
-| Check | What it proves | What it does not prove |
+| Part | Origin and role | What it needs |
 |---|---|---|
-| Rust compiler and headless probes | The tested logic and data paths run | That the window, input, camera, or sound feels right |
-| Software-rendered window | Some authored content appears in a real window | That normal GPU hardware, audio, or a release package works |
-| Synthetic controller input | Dispatch and bindings are wired | That a physical Xbox controller feels correct |
-| Save/load fixtures | The named state survives a round trip | That every live user route is safe |
-| A passing feature scenario | That scenario's contract | That unrelated systems or the whole game are complete |
+| `crates/` and authored content | New project code and authored content, much of it written with AI coding agents | The default standalone path uses the repository's authored content |
+| IW4L | [vladtrc's](https://github.com/vladtrc/iw4L) from-scratch Rust rewrite/runtime for IW4/MW2 | Its import modes read an MW2 installation supplied by the user |
+| `skate/` | Engine crates inherited from [SK8-ENGINE/skate-3-rust-engine](https://github.com/SK8-ENGINE/skate-3-rust-engine), whose project is based on Skate 3 reverse-engineering research | The converter reads an extracted Skate 3 Xbox 360 `default.xex` and its neighbouring `data` folder |
+| `third_party/minecraftoss/` | Five crates copied from MinecraftOSS commit `4013a68`, used for the optional Minecraft world mode | The launcher downloads Minecraft 26.3 files from Mojang; the included catalogs were exported by MinecraftOSS's harness |
+| `2010-rust-rewrite-mashup` | [chasmlol's](https://github.com/chasmlol/2010-rust-rewrite-mashup) project combined IW4L, Skate and Minecraft work | It inherits the requirements of the relevant mode |
 
-Keeping these boundaries in the status file prevented a passing probe from being reported as a finished playable game.
+That distinction matters. The project's own authored survival code is not the same thing as the inherited engine/research code around it.
 
-## The plan that worked best
+## Reverse engineering is part of the history
 
-The project became manageable when each change had a narrow acceptance boundary:
+The blanket sentence "no decompiled code" was too broad. A more accurate description is:
 
-1. Put the rule in a pure session/system API first.
-2. Add a small deterministic probe for success, refusal, and state preservation.
-3. Add save/load fields only when the feature actually needed persistence.
-4. Connect native input and English feedback after the rule worked headlessly.
-5. Run a focused graphical route in a real window.
-6. Record what remains open instead of marking the whole feature complete.
+- The repository does not intentionally ship decompiler output, Ghidra databases, `FUN_...` placeholders, extracted game assets, or a retail executable.
+- IW4L was built from scratch in Rust using reverse-engineering research into MW2/IW4 formats and behaviour. Its documentation says this directly.
+- `skate/` is inherited from SK8-ENGINE, which describes itself as based on Skate 3 reverse-engineering research. Some inherited comments and constants refer to Xbox 360 TU3 executable addresses and values learned from the executable.
+- `third_party/minecraftoss/` is inherited engine source. Its data catalogs are not claimed here to be original authored game design; they were exported by the MinecraftOSS harness for the 26.3 data used by that engine.
+- The new survival layer and authored assets are the project's own work, but that does not erase the provenance of the engines it uses.
 
-For example, building repair was checked separately for range, ownership, health, proportional cost, full-health refusal, insufficient resources, save/load, and native input. That was slower than asking for "building repair", but it made failures local and reviewable.
+Do not describe the whole repository as "free of reverse engineering". Say which layer is authored, which is inherited, and whether a file is source, a generated table, an extracted asset, or an unknown binary.
 
-## How the agent was kept on track
+## Unresolved binary provenance
 
-The repository used an `AGENTS.md`, a project status file, and issue-sized tasks. The rules included:
+`crates/fx_iw4/data/fx_random_table.bin` is byte-for-byte the same file as the one in upstream IW4L. The repository history identifies it as inherited from IW4L, but neither repository currently documents whether it was authored, generated from public research, or copied from a game. That is an open provenance question, not evidence that it is safe to redistribute.
 
-- all player-facing text stays in English;
-- original game files, extracted data, and retail offsets stay out of the product repository;
-- each task must state its verification boundary;
-- a compiler check is not presented as a gameplay check;
-- temporary probes and research stay outside the shipped product.
+The same caution applies to any bundled binary or generated catalog whose source is not recorded. Before publishing or merging, ask the upstream author for its origin and permission, or remove/regenerate it from a documented source.
 
-A useful task prompt was shaped like this:
+## Licences and notices
 
-```text
-Implement [one small feature] in the existing Rust/Bevy project.
+The top-level project declares Apache-2.0 for its own code, but that does not automatically relicense inherited code:
 
-First inspect the current API and status notes. Keep the public save format
-compatible unless this task requires a migration. Define the refusal cases
-before editing. Add or update focused checks for success, refusal, and
-save/load if relevant. Then connect the native input only after the rule is
-verified. Report exactly what was checked and what remains unverified.
-```
+- IW4L: Apache-2.0 according to its repository.
+- `skate/`: inherited from SK8-ENGINE/skate-3-rust-engine, whose repository states GPL-3.0-only. A GPL project must retain its licence obligations; an Apache-2.0 top-level declaration does not make the vendored code Apache-2.0.
+- `third_party/minecraftoss/`: copied at commit `4013a68`, but the vendored snapshot has no licence file or licence declaration. Do not guess its licence. Record the missing licence and get confirmation from MinecraftOSS before distributing those crates.
+- `fx_random_table.bin` and the Minecraft catalogs need provenance and licensing notes separate from the Rust source licence.
 
-The important part was not the wording alone. The agent had to read the current state, edit a limited surface, and report evidence instead of guessing from a successful build.
+The project's `NOTICE` should distinguish its own Apache-2.0 code from inherited IW4L, SK8-ENGINE and MinecraftOSS material. If a dependency's licence is unknown, say so plainly and treat it as a release blocker.
 
-## Dead ends and lessons
+## What a player must provide
 
-- **Starting with the full game idea:** too broad. Small vertical slices gave the agent a testable target.
-- **Treating compile success as playability:** misleading. A real window and a human-controlled route were needed.
-- **Adding input before the rule:** made failures hard to locate. The pure session rule came first.
-- **Calling bindings "controller support":** too strong without physical hardware. Synthetic input only proves the code path.
-- **Adding game files to make progress easier:** not appropriate for the repository. The product uses authored content and keeps research/development material separate.
+"Players must supply any games they own" is too vague. The modes are different:
 
-## What I would do differently
+| Mode | Uses bundled authored content? | External files required |
+|---|---:|---|
+| Default standalone launcher | Yes | None from a commercial game; it is still an unfinished development path |
+| IW4L/MW2 import modes | No, they read the selected game tree | A legally owned MW2 installation, selected through the IW4L game-data path |
+| Skate converter | No | An extracted Skate 3 Xbox 360 game folder, including `default.xex` and its `data` folder; the converter does not accept an ISO directly |
+| Minecraft mode | Partly | Mojang's Minecraft 26.3 client/assets are downloaded on first run; the bundled MinecraftOSS catalogs are generated support data, not the Mojang JAR or assets |
 
-Start with one tiny, complete user journey before adding a large catalogue of systems: launch, move, interact with one object, save, reload, and quit. Define the release gate before the first feature. Keep the status table from day one, and reserve the word "playable" for a route a person has actually completed in the intended build.
+The default launcher path is the planned original game. The other modes are inherited research/integration paths and have their own external-data requirements.
 
-## Credits and legal boundary
+## AI use and project rules
 
-This case study is based on the public project repository and its development notes. The project is an unofficial, standalone prototype. It includes no original commercial game assets or decompiled code. Players must supply any games they own themselves, and this write-up does not cover DRM, anti-cheat, or online play.
+AI wrote a large part of the current tree. IW4L documents that it was written by an LLM. In the checkout reviewed for this guide, the history has 128 commits attributed to Claude and 16 to Codex out of 300 total; those counts will change as development continues. That is process context, not a reason to hide the human and upstream research that made the inherited parts possible.
+
+The repository's `AGENTS.md` and `docs/AUTONOMY.md` describe how that project operates: issue-sized work, agent coordination, verification boundaries and standing authorization. They are project-specific operating rules, not a universal recommendation that every user should let an agent commit without asking. A different project may reasonably require approval before edits or commits.
+
+The README, `TODO.md`, and some development documents such as `docs/RUST-MAPS.md` and `docs/BUILDINGS.md` are written partly or entirely in Dutch. That is a documentation-language detail, not a property of player-facing game text; the project rules require in-game text to remain English.
+
+## Status and evidence
+
+The project is unfinished. It records code-level, headless, graphical and release-readiness checks separately. Some survival, inventory, building, combat, skate and save/load paths have focused checks; the complete user journey, hardware-controller feel, audio playback and release packaging are not thereby proven.
+
+That separation is the useful lesson for an AI-assisted rewrite: a passing compiler check does not prove a playable game, and a successful feature probe does not prove that every inherited dependency is publishable.
+
+## Credits
+
+- [IW4L](https://github.com/vladtrc/iw4L) by vladtrc: the from-scratch IW4/MW2 Rust runtime and research foundation.
+- [2010 Rust Rewrite Mashup](https://github.com/chasmlol/2010-rust-rewrite-mashup) by chasmlol: the project that combined the IW4L, Skate and Minecraft directions.
+- [SK8-ENGINE/skate-3-rust-engine](https://github.com/SK8-ENGINE/skate-3-rust-engine): inherited Skate 3 engine crates and reverse-engineering research.
+- MinecraftOSS: inherited Rust engine crates and the harness-exported Minecraft 26.3 catalogs.
+
+The project is unofficial and unaffiliated with the owners of MW2, Skate 3, Minecraft or their trademarks. The README banner uses game and technology logos as a project illustration; that does not create endorsement or affiliation. A safer redistributable banner would use only original artwork and plain text names.
 
 ---
 
