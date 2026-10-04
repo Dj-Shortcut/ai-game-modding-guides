@@ -79,7 +79,7 @@ That separation is the useful lesson for an AI-assisted rewrite: a passing compi
 - [SK8-ENGINE/skate-3-rust-engine](https://github.com/SK8-ENGINE/skate-3-rust-engine): inherited Skate 3 engine crates and reverse-engineering research.
 - MinecraftOSS: inherited Rust engine crates and the harness-exported Minecraft 26.3 catalogs.
 
-The project is unofficial and unaffiliated with the owners of MW2, Skate 3, Minecraft or their trademarks. The README banner uses game and technology logos as a project illustration; that does not create endorsement or affiliation. A safer redistributable banner would use only original artwork and plain text names.
+The project is unofficial and unaffiliated with the owners of MW2, Skate 3, Minecraft or their trademarks. A disclaimer does not by itself establish permission to use their logos: the README banner uses the Rust, MW2 and Skate 3 logos, so its clearance is unresolved. For a redistributable project, replace it with original artwork and plain text names unless the logo owners' terms clearly permit the use.
 
 ---
 
